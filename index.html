@@ -1,353 +1,1170 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BIDA Prestige — Mariage • Chauffeur • Cortège</title>
-  <meta name="description" content="BIDA Prestige à Khenchela : voiture prestige pour mariage, chauffeur, cortège, décoration et événements. Contact WhatsApp direct." />
-  <meta name="theme-color" content="#050505" />
-  <meta property="og:title" content="BIDA Prestige" />
-  <meta property="og:description" content="Voiture prestige pour mariage, chauffeur, cortège et événements à Khenchela." />
-  <meta property="og:image" content="assets/logo-bida-prestige.png" />
-  <style>
-    :root {
-      --bg:#050505;
-      --bg2:#0b0b0b;
-      --card:#111111;
-      --card2:#17130d;
-      --text:#f7f1e8;
-      --muted:#b9afa0;
-      --gold:#cfa75e;
-      --gold2:#f5d48a;
-      --silver:#d8d8d8;
-      --line:rgba(255,255,255,.13);
-      --shadow:0 24px 80px rgba(0,0,0,.55);
-      --radius:24px;
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(207,167,94,.22), transparent 28rem),
-        radial-gradient(circle at 90% 20%, rgba(216,216,216,.10), transparent 18rem),
-        linear-gradient(180deg,#030303 0%,#080808 42%,#020202 100%);
-      color:var(--text);
-      line-height:1.55;
-    }
-    a { color:inherit; text-decoration:none; }
-    img { max-width:100%; display:block; }
-    .wrap { width:min(1120px, calc(100% - 32px)); margin:auto; }
-    .topbar {
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(16px);
-      background:rgba(5,5,5,.74);
-      border-bottom:1px solid var(--line);
-    }
-    .nav { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .brand { display:flex; align-items:center; gap:12px; min-width:0; }
-    .brand img { width:48px; height:48px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 1px rgba(255,255,255,.18); }
-    .brand strong { display:block; font-size:18px; letter-spacing:.04em; }
-    .brand span { display:block; color:var(--muted); font-size:12px; margin-top:-2px; }
-    .navlinks { display:flex; align-items:center; gap:18px; color:var(--muted); font-size:14px; }
-    .navlinks a:hover { color:var(--text); }
-    .btn {
-      display:inline-flex; align-items:center; justify-content:center; gap:9px;
-      min-height:48px; padding:13px 18px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:750;
-      letter-spacing:.01em;
-      box-shadow:0 12px 30px rgba(0,0,0,.22);
-    }
-    .btn.gold {
-      background:linear-gradient(135deg,#f5d48a 0%,#cfa75e 45%,#8d6826 100%);
-      color:#130e06;
-      border-color:rgba(245,212,138,.8);
-      box-shadow:0 18px 48px rgba(207,167,94,.22);
-    }
-    .btn.dark { background:rgba(0,0,0,.34); }
-    .hero { padding:56px 0 42px; }
-    .hero-grid { display:grid; grid-template-columns:1.02fr .98fr; gap:36px; align-items:center; }
-    .kicker {
-      display:inline-flex; align-items:center; gap:10px;
-      color:var(--gold2); font-weight:700; letter-spacing:.18em;
-      text-transform:uppercase; font-size:12px;
-      border:1px solid rgba(207,167,94,.34);
-      padding:9px 12px; border-radius:999px;
-      background:rgba(207,167,94,.08);
-    }
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size:clamp(44px, 8vw, 86px);
-      line-height:.92;
-      margin:22px 0 16px;
-      letter-spacing:.035em;
-      text-transform:uppercase;
-      text-shadow:0 0 32px rgba(207,167,94,.16);
-    }
-    .subtitle {
-      font-size:clamp(18px, 2.4vw, 26px);
-      color:#fff7e9;
-      margin:0 0 12px;
-      font-weight:700;
-    }
-    .lead { max-width:650px; color:var(--muted); font-size:17px; margin:0 0 26px; }
-    .cta-row { display:flex; flex-wrap:wrap; gap:12px; margin:26px 0 24px; }
-    .facts { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; margin-top:24px; }
-    .fact {
-      border:1px solid var(--line); border-radius:18px; padding:13px;
-      background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
-    }
-    .fact b { display:block; color:var(--gold2); font-size:13px; }
-    .fact span { display:block; color:var(--muted); font-size:13px; margin-top:2px; }
-    .logo-card {
-      position:relative;
-      border-radius:36px;
-      padding:22px;
-      background:
-        linear-gradient(135deg,rgba(255,255,255,.16),transparent 18%),
-        linear-gradient(180deg,rgba(207,167,94,.10),rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.15);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .logo-card:before {
-      content:""; position:absolute; inset:-2px;
-      background:radial-gradient(circle at 50% 12%, rgba(245,212,138,.18), transparent 32%), transparent;
-      pointer-events:none;
-    }
-    .logo-card img { position:relative; border-radius:28px; box-shadow:0 30px 80px rgba(0,0,0,.45); }
-    section { padding:42px 0; }
-    .section-head { margin-bottom:22px; }
-    .section-head h2 {
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(28px,4vw,46px);
-      margin:0 0 8px;
-      letter-spacing:.03em;
-    }
-    .section-head p { color:var(--muted); margin:0; max-width:760px; }
-    .cards { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
-    .card {
-      min-height:220px;
-      padding:22px;
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:
-        linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025)),
-        #0b0b0b;
-      box-shadow:0 18px 50px rgba(0,0,0,.22);
-      position:relative;
-      overflow:hidden;
-    }
-    .card:after {
-      content:""; position:absolute; width:160px; height:160px; right:-88px; bottom:-88px;
-      border-radius:50%; background:rgba(207,167,94,.10);
-    }
-    .icon {
-      width:46px; height:46px; display:grid; place-items:center;
-      border-radius:16px; margin-bottom:18px;
-      background:linear-gradient(135deg,rgba(245,212,138,.22),rgba(255,255,255,.04));
-      border:1px solid rgba(207,167,94,.30);
-      font-size:22px;
-    }
-    .card h3 { margin:0 0 8px; font-size:20px; }
-    .card p { margin:0; color:var(--muted); font-size:15px; }
-    .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:stretch; }
-    .panel {
-      border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
-      padding:24px;
-    }
-    .panel ul { margin:14px 0 0; padding:0; list-style:none; }
-    .panel li { padding:10px 0; border-bottom:1px solid rgba(255,255,255,.08); color:var(--muted); }
-    .panel li:last-child { border-bottom:0; }
-    .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
-    .step {
-      padding:22px; border-radius:var(--radius); border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-    }
-    .num { color:var(--gold2); font-weight:900; font-size:13px; letter-spacing:.12em; }
-    .step h3 { margin:8px 0; }
-    .step p { color:var(--muted); margin:0; }
-    .gallery { display:grid; grid-template-columns:2fr 1fr 1fr; gap:14px; }
-    .placeholder {
-      min-height:220px; border-radius:var(--radius); border:1px solid var(--line);
-      background:
-        radial-gradient(circle at 30% 20%, rgba(207,167,94,.20), transparent 28%),
-        linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
-      display:flex; flex-direction:column; justify-content:flex-end; padding:18px;
-      overflow:hidden; position:relative;
-    }
-    .placeholder.big { min-height:360px; grid-row:span 2; }
-    .placeholder:before {
-      content:""; position:absolute; inset:16px; border:1px dashed rgba(255,255,255,.18); border-radius:18px;
-    }
-    .placeholder b, .placeholder span { position:relative; }
-    .placeholder b { color:#fff; }
-    .placeholder span { color:var(--muted); font-size:13px; }
-    .contact {
-      border-radius:34px;
-      border:1px solid rgba(207,167,94,.30);
-      background:
-        radial-gradient(circle at 50% 0%, rgba(207,167,94,.18), transparent 38%),
-        linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-      padding:30px;
-      display:grid; grid-template-columns:1.15fr .85fr; gap:20px; align-items:center;
-    }
-    .contact h2 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(30px,5vw,52px); margin:0 0 10px; }
-    .contact p { color:var(--muted); margin:0 0 18px; }
-    .mini { display:grid; gap:10px; }
-    .mini div { border:1px solid var(--line); border-radius:18px; padding:14px; background:rgba(0,0,0,.22); }
-    .mini b { color:var(--gold2); display:block; }
-    footer { padding:28px 0 92px; color:var(--muted); text-align:center; font-size:13px; }
-    .float-wa {
-      position:fixed; z-index:80; left:16px; right:16px; bottom:16px;
-      display:none; justify-content:center;
-    }
-    .float-wa .btn { width:min(560px,100%); }
-    @media (max-width:900px) {
-      .hero-grid, .split, .contact { grid-template-columns:1fr; }
-      .cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .gallery { grid-template-columns:1fr 1fr; }
-      .placeholder.big { grid-column:span 2; }
-      .navlinks a:not(.btn) { display:none; }
-      .float-wa { display:flex; }
-    }
-    @media (max-width:560px) {
-      .wrap { width:min(100% - 22px,1120px); }
-      .hero { padding:34px 0 24px; }
-      .facts, .cards, .steps, .gallery { grid-template-columns:1fr; }
-      .placeholder.big { grid-column:auto; }
-      .brand strong { font-size:16px; }
-      .brand span { display:none; }
-      .nav { min-height:62px; }
-      .btn { width:100%; }
-      .cta-row .btn { width:100%; }
-      .logo-card { padding:12px; border-radius:28px; }
-      .contact { padding:22px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIDA Prestige — Mariage, chauffeur & cortège à Khenchela</title>
+<meta name="description" content="BIDA Prestige accompagne vos mariages à Khenchela : Mercedes décorée, chauffeur sérieux, cortège élégant et esprit chaoui. Contact WhatsApp direct.">
+
+<meta property="og:title" content="BIDA Prestige — Mariage • Chauffeur • Cortège">
+<meta property="og:description" content="Mercedes prestige pour mariages chaouis, cortèges et événements à Khenchela.">
+<meta property="og:image" content="Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
+<meta property="og:type" content="website">
+
+<style>
+:root{
+  --black:#050505;
+  --black2:#10100f;
+  --panel:#151412;
+  --panel2:#1b1916;
+  --gold:#d8b35f;
+  --gold2:#f0d48a;
+  --cream:#f5efe2;
+  --muted:#beb5a5;
+  --line:rgba(216,179,95,.34);
+  --white:#fff;
+  --shadow:0 24px 80px rgba(0,0,0,.55);
+  --radius:28px;
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  background:var(--black);
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 15% 8%, rgba(216,179,95,.18), transparent 26%),
+    radial-gradient(circle at 88% 18%, rgba(216,179,95,.10), transparent 28%),
+    linear-gradient(180deg,#050505 0%,#080807 35%,#050505 100%);
+  color:var(--cream);
+  overflow-x:hidden;
+  padding-bottom:84px;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrapper{
+  width:min(1180px, calc(100% - 32px));
+  margin:0 auto;
+}
+
+.topbar{
+  position:fixed;
+  z-index:50;
+  left:0;
+  top:0;
+  width:100%;
+  background:rgba(5,5,5,.72);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(216,179,95,.18);
+}
+
+.nav{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.brand strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--cream);
+}
+
+.brand span{
+  margin-top:7px;
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold2);
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.navlinks a{
+  font-weight:800;
+  font-size:14px;
+  color:var(--muted);
+  padding:12px 14px;
+  border:1px solid transparent;
+  border-radius:999px;
+}
+
+.navlinks a:hover{
+  color:var(--cream);
+  border-color:var(--line);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 24px;
+  border-radius:999px;
+  font-weight:950;
+  letter-spacing:.01em;
+  border:1px solid rgba(255,255,255,.12);
+  cursor:pointer;
+  transition:.18s ease;
+  text-align:center;
+  white-space:nowrap;
+}
+
+.btn.gold{
+  color:#111;
+  background:linear-gradient(135deg,#f8dc8f 0%,#d8b35f 48%,#9b7930 100%);
+  box-shadow:0 12px 34px rgba(216,179,95,.22), inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.btn.dark{
+  color:var(--cream);
+  background:rgba(255,255,255,.04);
+  border-color:rgba(216,179,95,.26);
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.05);
+}
+
+.hero{
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  padding:116px 0 44px;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.55) 46%,rgba(0,0,0,.25) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 46%,rgba(0,0,0,.92) 100%),
+    url("Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png") center/cover no-repeat;
+  transform:scale(1.02);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:160px;
+  background:linear-gradient(180deg,transparent,var(--black));
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  width:min(850px,100%);
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 18px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(12,12,10,.58);
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+
+h1{
+  margin:28px 0 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(54px, 10vw, 118px);
+  line-height:.86;
+  letter-spacing:-.055em;
+  color:var(--cream);
+  text-transform:uppercase;
+  text-shadow:0 12px 50px rgba(0,0,0,.7);
+}
+
+.hero-sub{
+  margin:24px 0 0;
+  font-size:clamp(22px, 4.8vw, 42px);
+  line-height:1.08;
+  max-width:900px;
+  color:#fff;
+  font-weight:950;
+}
+
+.hero-text{
+  margin:22px 0 0;
+  max-width:720px;
+  font-size:clamp(17px, 3.5vw, 24px);
+  line-height:1.46;
+  color:#ded4c5;
+  font-weight:650;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.hero-note{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.45;
+}
+
+.section{
+  position:relative;
+  padding:64px 0;
+}
+
+.section.tight{
+  padding-top:28px;
+}
+
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:22px;
+  margin-bottom:24px;
+}
+
+.kicker{
+  color:var(--gold2);
+  font-size:12px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  font-weight:950;
+}
+
+h2{
+  margin:8px 0 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(38px, 7vw, 72px);
+  line-height:.92;
+  letter-spacing:-.04em;
+  color:var(--cream);
+}
+
+.section-lead{
+  max-width:670px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.55;
+  font-weight:650;
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+  align-items:stretch;
+}
+
+.story-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius);
+  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+  border:1px solid rgba(216,179,95,.22);
+  box-shadow:var(--shadow);
+}
+
+.story-card.big{
+  min-height:560px;
+}
+
+.story-card.small{
+  min-height:271px;
+}
+
+.story-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+
+.story-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82));
+}
+
+.story-caption{
+  position:absolute;
+  z-index:3;
+  left:24px;
+  right:24px;
+  bottom:22px;
+}
+
+.story-caption strong{
+  display:block;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:34px;
+  line-height:1;
+  letter-spacing:-.03em;
+}
+
+.story-caption span{
+  display:block;
+  margin-top:9px;
+  color:#e6ddce;
+  font-weight:700;
+  line-height:1.45;
+}
+
+.side-stack{
+  display:grid;
+  gap:18px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+  min-height:300px;
+  border-radius:var(--radius);
+  padding:24px;
+  background:
+    radial-gradient(circle at 96% 100%, rgba(216,179,95,.16), transparent 34%),
+    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  border:1px solid rgba(216,179,95,.22);
+  box-shadow:0 18px 54px rgba(0,0,0,.36);
+}
+
+.card .visual{
+  height:132px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+.card .visual img{
+  max-height:132px;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.35));
+}
+
+.card h3{
+  margin:0;
+  font-size:26px;
+  line-height:1.05;
+  color:#fff;
+  letter-spacing:-.03em;
+}
+
+.card p{
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.5;
+  font-weight:650;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:22px;
+  align-items:center;
+}
+
+.panel{
+  border:1px solid rgba(216,179,95,.24);
+  border-radius:calc(var(--radius) + 6px);
+  background:
+    radial-gradient(circle at 0 0, rgba(216,179,95,.15), transparent 34%),
+    linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.022));
+  box-shadow:var(--shadow);
+  padding:34px;
+}
+
+.panel h2{
+  margin-top:0;
+}
+
+.panel p{
+  color:#d6cbbc;
+  font-size:19px;
+  line-height:1.55;
+  font-weight:650;
+}
+
+.media{
+  overflow:hidden;
+  border-radius:calc(var(--radius) + 6px);
+  min-height:520px;
+  border:1px solid rgba(216,179,95,.2);
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+.media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+
+.service-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.service{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:18px;
+  align-items:center;
+  border-radius:var(--radius);
+  padding:22px;
+  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.022));
+  border:1px solid rgba(216,179,95,.22);
+}
+
+.service-img{
+  width:150px;
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:24px;
+  background:rgba(0,0,0,.23);
+  border:1px solid rgba(216,179,95,.18);
+  overflow:hidden;
+}
+
+.service-img img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:8px;
+  filter:drop-shadow(0 16px 20px rgba(0,0,0,.38));
+}
+
+.service h3{
+  margin:0;
+  font-size:28px;
+  letter-spacing:-.035em;
+  color:#fff;
+}
+
+.service p{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.48;
+  font-weight:650;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.gallery a{
+  position:relative;
+  overflow:hidden;
+  border-radius:22px;
+  aspect-ratio:1/1;
+  border:1px solid rgba(216,179,95,.18);
+  background:#111;
+}
+
+.gallery a:nth-child(1),
+.gallery a:nth-child(4),
+.gallery a:nth-child(7){
+  grid-column:span 2;
+  aspect-ratio:16/9;
+}
+
+.gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.3s ease;
+}
+
+.gallery a:hover img{
+  transform:scale(1.04);
+}
+
+.gallery a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.65));
+}
+
+.gallery span{
+  position:absolute;
+  z-index:2;
+  left:14px;
+  right:14px;
+  bottom:12px;
+  color:#fff;
+  font-size:14px;
+  font-weight:900;
+  text-shadow:0 3px 14px #000;
+}
+
+.request{
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:22px;
+  align-items:stretch;
+}
+
+.request-box{
+  border-radius:calc(var(--radius) + 8px);
+  padding:34px;
+  background:
+    linear-gradient(180deg,rgba(216,179,95,.12),rgba(216,179,95,.035)),
+    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+  border:1px solid rgba(216,179,95,.28);
+  box-shadow:var(--shadow);
+}
+
+.request-box h2{
+  margin-top:0;
+}
+
+.whatsapp-list{
+  display:grid;
+  gap:10px;
+  margin:22px 0 0;
+}
+
+.whatsapp-list div{
+  padding:16px 18px;
+  border-radius:18px;
+  background:rgba(0,0,0,.28);
+  border:1px solid rgba(255,255,255,.08);
+  color:#e8dfd0;
+  font-weight:750;
+}
+
+.contact-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:18px;
+  border-radius:calc(var(--radius) + 8px);
+  padding:28px;
+  background:#090908;
+  border:1px solid rgba(216,179,95,.28);
+  box-shadow:var(--shadow);
+}
+
+.contact-line{
+  border-radius:22px;
+  padding:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-line small{
+  display:block;
+  color:var(--gold2);
+  font-size:13px;
+  font-weight:950;
+  margin-bottom:8px;
+}
+
+.contact-line strong{
+  display:block;
+  font-size:24px;
+}
+
+.notice{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.55;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:18px;
+}
+
+.footer{
+  padding:30px 0 44px;
+  border-top:1px solid rgba(216,179,95,.18);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+.footer strong{
+  color:var(--cream);
+}
+
+.mobile-cta{
+  position:fixed;
+  z-index:70;
+  left:14px;
+  right:14px;
+  bottom:12px;
+  display:none;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.mobile-cta a{
+  min-height:58px;
+}
+
+@media(max-width:900px){
+  body{padding-bottom:86px}
+  .nav{height:72px}
+  .navlinks a:not(.btn){display:none}
+  .brand strong{font-size:19px}
+  .brand span{font-size:10px}
+  .hero{
+    padding-top:96px;
+    min-height:92svh;
+  }
+  .hero::before{
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.68) 48%,rgba(0,0,0,.96) 100%),
+      url("Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png") center/cover no-repeat;
+  }
+  .hero-actions .btn{width:100%}
+  .section{padding:42px 0}
+  .section-head{
+    display:block;
+    margin-bottom:18px;
+  }
+  .section-lead{
+    margin-top:14px;
+    font-size:16px;
+  }
+  .story-grid,
+  .split,
+  .request{
+    grid-template-columns:1fr;
+  }
+  .story-card.big{min-height:420px}
+  .story-card.small{min-height:260px}
+  .cards,
+  .service-list{
+    grid-template-columns:1fr;
+  }
+  .card{
+    min-height:auto;
+    display:grid;
+    grid-template-columns:112px 1fr;
+    gap:16px;
+    align-items:center;
+    padding:18px;
+  }
+  .card .visual{
+    height:112px;
+    margin:0;
+  }
+  .card .visual img{
+    max-height:112px;
+  }
+  .card h3{
+    font-size:24px;
+  }
+  .service{
+    grid-template-columns:112px 1fr;
+    padding:16px;
+  }
+  .service-img{
+    width:112px;
+    height:112px;
+  }
+  .service h3{font-size:23px}
+  .media{min-height:360px}
+  .panel{padding:24px}
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .gallery a:nth-child(1),
+  .gallery a:nth-child(4),
+  .gallery a:nth-child(7){
+    grid-column:span 2;
+  }
+  .mobile-cta{display:grid}
+}
+
+@media(max-width:520px){
+  .wrapper{width:min(100% - 24px,1180px)}
+  .topbar .btn{min-height:44px;padding:0 16px;font-size:14px}
+  .hero-sub{font-size:28px}
+  .hero-text{font-size:18px}
+  .pill{font-size:10px;letter-spacing:.18em}
+  .service,
+  .card{
+    grid-template-columns:96px 1fr;
+  }
+  .service-img,
+  .card .visual{
+    width:96px;
+    height:96px;
+  }
+  .card .visual img{
+    max-height:96px;
+  }
+  .card h3,
+  .service h3{
+    font-size:21px;
+  }
+  .card p,
+  .service p{
+    font-size:15px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="BIDA Prestige accueil">
-        <img src="assets/logo-bida-prestige.png" alt="Logo BIDA Prestige" />
-        <span><strong>BIDA Prestige</strong><span>Mariage • Chauffeur • Cortège</span></span>
+
+<header class="topbar">
+  <div class="wrapper nav">
+    <a href="#" class="brand" aria-label="BIDA Prestige">
+      <strong>BIDA Prestige</strong>
+      <span>Khenchela • Algérie</span>
+    </a>
+
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#ambiance">Ambiance</a>
+      <a href="#galerie">Galerie</a>
+      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20une%20voiture%20de%20mariage.%0AVille%20%3A%20%0ADate%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0AAvec%20chauffeur%20%3A%20oui%0AD%C3%A9coration%20%3A%20%C3%A0%20voir" target="_blank" rel="noopener">
+        WhatsApp
       </a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="#services">Services</a>
-        <a href="#photos">Photos</a>
-        <a href="#contact">Contact</a>
-        <a class="btn gold" href="https://wa.me/213770742975?text=Bonjour%2C%20je%20vous%20contacte%20pour%20BIDA%20Prestige.%20Je%20souhaite%20des%20informations%20pour%20un%20mariage%20/%20%C3%A9v%C3%A9nement.%20Date%20%3A%20Ville%20%3A%20Type%20de%20service%20%3A%20voiture%20avec%20chauffeur%20/%20cort%C3%A8ge%20/%20d%C3%A9coration%20/%20location%20Nombre%20de%20voitures%20souhait%C3%A9es%20%3A%20Dur%C3%A9e%20approximative%20%3A" target="_blank" rel="noopener">WhatsApp</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="kicker">Khenchela • Algérie</div>
-          <h1>BIDA<br>Prestige</h1>
-          <p class="subtitle">Mariage • Chauffeur • Cortège • Auto prestige</p>
-          <p class="lead">Votre arrivée mérite une belle voiture, un chauffeur sérieux et un cortège propre. BIDA Prestige accompagne les mariages, fiançailles et événements avec un service voiture soigné, direct et disponible sur WhatsApp.</p>
-          <div class="cta-row">
-            <a class="btn gold" href="https://wa.me/213770742975?text=Bonjour%2C%20je%20vous%20contacte%20pour%20BIDA%20Prestige.%20Je%20souhaite%20des%20informations%20pour%20un%20mariage%20/%20%C3%A9v%C3%A9nement.%20Date%20%3A%20Ville%20%3A%20Type%20de%20service%20%3A%20voiture%20avec%20chauffeur%20/%20cort%C3%A8ge%20/%20d%C3%A9coration%20/%20location%20Nombre%20de%20voitures%20souhait%C3%A9es%20%3A%20Dur%C3%A9e%20approximative%20%3A" target="_blank" rel="noopener">Demander sur WhatsApp</a>
-            <a class="btn dark" href="tel:+213770742975">Appeler 0770 74 29 75</a>
-          </div>
-          <div class="facts">
-            <div class="fact"><b>Base</b><span>Khenchela</span></div>
-            <div class="fact"><b>Déplacement</b><span>Sur devis</span></div>
-            <div class="fact"><b>Prestation</b><span>Mariage & événement</span></div>
-          </div>
-        </div>
-        <div class="logo-card">
-          <img src="assets/logo-bida-prestige.png" alt="BIDA Prestige — logo" />
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Services</h2>
-          <p>Une offre simple à comprendre : une voiture élégante, un accompagnement sérieux, et une organisation adaptée à la demande.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="icon">💍</div><h3>Mariage avec chauffeur</h3><p>Arrivée des mariés, accompagnement, présence soignée et voiture préparée selon la prestation.</p></article>
-          <article class="card"><div class="icon">🚘</div><h3>Cortège & escorte</h3><p>Organisation de plusieurs voitures selon disponibilité, pour un cortège propre et coordonné.</p></article>
-          <article class="card"><div class="icon">🌹</div><h3>Décoration voiture</h3><p>Décoration possible selon le style demandé : sobre, classe, visible, adaptée au mariage.</p></article>
-          <article class="card"><div class="icon">✨</div><h3>Location prestige</h3><p>Location avec chauffeur en priorité. Sans chauffeur uniquement selon conditions et accord.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap split">
-        <div class="panel">
-          <div class="section-head"><h2>Comment ça marche ?</h2><p>Le client explique son besoin. BIDA Prestige confirme ce qui est possible selon la date, la ville, la voiture et la durée.</p></div>
-          <ul>
-            <li><strong>1.</strong> Envoyez la date, la ville et le type d’événement.</li>
-            <li><strong>2.</strong> Précisez : chauffeur, cortège, décoration, durée, nombre de voitures.</li>
-            <li><strong>3.</strong> Réponse sur WhatsApp avec disponibilité et tarif selon la demande.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <div class="section-head"><h2>À savoir</h2><p>La prestation dépend toujours de la disponibilité des voitures et de la distance.</p></div>
-          <ul>
-            <li>Voitures prestige selon disponibilité.</li>
-            <li>Déplacement possible sur devis.</li>
-            <li>Décoration possible selon demande.</li>
-            <li>Service Mercedes / custom possible en second plan, sur demande.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="photos">
-      <div class="wrap">
-        <div class="section-head"><h2>Galerie</h2><p>Emplacements prêts. Il suffit d’ajouter les vraies photos : voiture star, décoration, cortège, intérieur et vidéos verticales.</p></div>
-        <div class="gallery">
-          <div class="placeholder big"><b>Photo principale voiture</b><span>À remplacer par la plus belle voiture disponible</span></div>
-          <div class="placeholder"><b>Décoration mariage</b><span>Capot, bouquet, bagues, détail élégant</span></div>
-          <div class="placeholder"><b>Cortège</b><span>Plusieurs voitures / arrivée mariés</span></div>
-          <div class="placeholder"><b>Intérieur propre</b><span>Confort, cuir, détails</span></div>
-          <div class="placeholder"><b>Vidéo courte</b><span>Format TikTok / WhatsApp</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap contact">
-        <div>
-          <h2>Demander une disponibilité</h2>
-          <p>Envoyez les informations du mariage ou de l’événement sur WhatsApp. Réponse selon la date, la distance, la voiture et la prestation.</p>
-          <div class="cta-row">
-            <a class="btn gold" href="https://wa.me/213770742975?text=Bonjour%2C%20je%20vous%20contacte%20pour%20BIDA%20Prestige.%20Je%20souhaite%20des%20informations%20pour%20un%20mariage%20/%20%C3%A9v%C3%A9nement.%20Date%20%3A%20Ville%20%3A%20Type%20de%20service%20%3A%20voiture%20avec%20chauffeur%20/%20cort%C3%A8ge%20/%20d%C3%A9coration%20/%20location%20Nombre%20de%20voitures%20souhait%C3%A9es%20%3A%20Dur%C3%A9e%20approximative%20%3A" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
-            <a class="btn dark" href="tel:+213770742975">Appeler</a>
-          </div>
-        </div>
-        <div class="mini">
-          <div><b>WhatsApp</b><span>0770 74 29 75</span></div>
-          <div><b>Contact secondaire à confirmer</b><span>0771 43 80 10</span></div>
-          <div><b>Ville</b><span>Khenchela — déplacement sur devis</span></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="float-wa">
-    <a class="btn gold" href="https://wa.me/213770742975?text=Bonjour%2C%20je%20vous%20contacte%20pour%20BIDA%20Prestige.%20Je%20souhaite%20des%20informations%20pour%20un%20mariage%20/%20%C3%A9v%C3%A9nement.%20Date%20%3A%20Ville%20%3A%20Type%20de%20service%20%3A%20voiture%20avec%20chauffeur%20/%20cort%C3%A8ge%20/%20d%C3%A9coration%20/%20location%20Nombre%20de%20voitures%20souhait%C3%A9es%20%3A%20Dur%C3%A9e%20approximative%20%3A" target="_blank" rel="noopener">WhatsApp BIDA Prestige</a>
+    </nav>
   </div>
+</header>
 
-  <footer>
-    <div class="wrap">BIDA Prestige — Mariage • Chauffeur • Cortège • Auto prestige<br>Site vitrine provisoire — textes, numéro et photos à confirmer sur le terrain.</div>
-  </footer>
+<main>
+
+<section class="hero">
+  <div class="wrapper hero-inner">
+    <div class="pill">Khenchela • Mariage chaoui • Mercedes prestige</div>
+
+    <h1>BIDA<br>Prestige</h1>
+
+    <div class="hero-sub">
+      Votre arrivée doit se voir.
+    </div>
+
+    <p class="hero-text">
+      Mercedes décorée, chauffeur sérieux, cortège propre et ambiance chaouie.
+      BIDA Prestige accompagne les mariages, fiançailles et événements à Khenchela avec une présence élégante, locale et fiable.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20r%C3%A9server%20ou%20demander%20un%20prix%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
+        Demander sur WhatsApp
+      </a>
+
+      <a class="btn dark" href="tel:+213770742975">
+        Appeler 0770 74 29 75
+      </a>
+    </div>
+
+    <p class="hero-note">
+      Prestation sur devis selon la date, la distance, le véhicule disponible, la décoration et l’organisation du cortège.
+    </p>
+  </div>
+</section>
+
+<section class="section tight" id="ambiance">
+  <div class="wrapper">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Direction</div>
+        <h2>Prestige chaoui moderne</h2>
+      </div>
+      <p class="section-lead">
+        Le site ne vend pas seulement une voiture. Il vend une arrivée : famille, cortège, musique, chevaux, baroud de fête en arrière-plan et Mercedes propre au centre.
+      </p>
+    </div>
+
+    <div class="story-grid">
+      <article class="story-card big">
+        <img src="Image/Site/02-section-ambiance-danse-chaouie-et-baroud.png" alt="Ambiance de mariage chaoui avec Mercedes et cortège à Khenchela">
+        <div class="story-caption">
+          <strong>Mariage vivant</strong>
+          <span>Un service pensé pour les vrais mariages algériens : mouvement, fierté, familles, cortège et traditions.</span>
+        </div>
+      </article>
+
+      <div class="side-stack">
+        <article class="story-card small">
+          <img src="Image/Site/03-section-maries-tenue-chaouie-et-mercedes.png" alt="Mariés en tenue élégante près d’une Mercedes décorée">
+          <div class="story-caption">
+            <strong>Mariés</strong>
+            <span>Une arrivée propre, posée, photographiable.</span>
+          </div>
+        </article>
+
+        <article class="story-card small">
+          <img src="Image/Site/05-section-chevaux-baroud-et-mercedes.png" alt="Chevaux, baroud et Mercedes lors d’un mariage">
+          <div class="story-caption">
+            <strong>Tradition</strong>
+            <span>Chevaux, musique et baroud restent l’ambiance du mariage, pas une décoration vide.</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrapper">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Services</div>
+        <h2>Ce que BIDA Prestige apporte</h2>
+      </div>
+      <p class="section-lead">
+        Une offre claire : une belle voiture, une arrivée bien tenue, un chauffeur sérieux et une organisation adaptée au mariage.
+      </p>
+    </div>
+
+    <div class="service-list">
+
+      <article class="service">
+        <div class="service-img">
+          <img src="Image/Icone/voiture_de_mariage_élégante_et_moderne.png" alt="Voiture de mariage décorée">
+        </div>
+        <div>
+          <h3>Voiture mariage</h3>
+          <p>Mercedes décorée pour l’arrivée des mariés, les photos et les déplacements importants de la journée.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-img">
+          <img src="Image/Icone/voiture_de_luxe_et_chauffeur_élégant.png" alt="Chauffeur élégant avec voiture de luxe">
+        </div>
+        <div>
+          <h3>Chauffeur sérieux</h3>
+          <p>Conduite propre, présence discrète, respect des horaires et accompagnement des mariés.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-img">
+          <img src="Image/Icone/défilé_nuptial_de_mercedes_de_luxe.png" alt="Cortège de Mercedes décorées">
+        </div>
+        <div>
+          <h3>Cortège coordonné</h3>
+          <p>Plusieurs voitures possibles selon disponibilité, pour une arrivée organisée et plus impressionnante.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-img">
+          <img src="Image/Icone/anneaux_de_mariage_et_bouquet_élégant.png" alt="Anneaux de mariage et bouquet élégant">
+        </div>
+        <div>
+          <h3>Décoration mariage</h3>
+          <p>Fleurs, rubans et détails élégants selon le style demandé : sobre, visible et adapté aux photos.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-img">
+          <img src="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Bendir et gasba pour ambiance chaouie">
+        </div>
+        <div>
+          <h3>Ambiance locale</h3>
+          <p>Le service s’inscrit dans les mariages de Khenchela : musique, danse, famille et esprit chaoui.</p>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="service-img">
+          <img src="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel">
+        </div>
+        <div>
+          <h3>Arrivée prestige</h3>
+          <p>La voiture reste le centre du service, avec une mise en scène qui respecte l’énergie du mariage.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper split">
+    <div class="panel">
+      <div class="kicker">L’arrivée</div>
+      <h2>La Mercedes au centre du cortège</h2>
+      <p>
+        Dans un mariage à Khenchela, l’arrivée compte. BIDA Prestige place la Mercedes au centre : voiture propre, décoration visible, chauffeur présent, cortège suivi et ambiance respectée.
+      </p>
+      <p>
+        Le but n’est pas de faire une location froide. Le but est d’accompagner un moment de famille, de fierté et de fête.
+      </p>
+      <div class="hero-actions">
+        <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20organiser%20un%20cort%C3%A8ge%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0ANombre%20de%20voitures%20%3A%20" target="_blank" rel="noopener">
+          Organiser le cortège
+        </a>
+      </div>
+    </div>
+
+    <div class="media">
+      <img src="Image/Site/04-section-cortege-mercedes-au-crepuscule.png" alt="Cortège Mercedes au crépuscule avec ambiance de mariage">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="cards">
+
+      <article class="card">
+        <div class="visual">
+          <img src="Image/Icone/voiture_de_luxe_décorée_pour_un_mariage.png" alt="Détail Mercedes décorée">
+        </div>
+        <div>
+          <h3>Voiture propre</h3>
+          <p>Une image nette pour les photos, les vidéos et l’arrivée devant la famille.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <img src="Image/Icone/intérieur_de_voiture_de_luxe_avec_fleurs.png" alt="Intérieur de voiture avec fleurs">
+        </div>
+        <div>
+          <h3>Intérieur soigné</h3>
+          <p>Une voiture présentable, confortable et adaptée aux mariés.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <img src="Image/Icone/bijoux_en_argent_sur_fond_bleu_nuit.png" alt="Bijoux chaouis en argent">
+        </div>
+        <div>
+          <h3>Esprit chaoui</h3>
+          <p>Une direction visuelle qui respecte les codes locaux : bijoux, tenue, bleu profond et argent.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <img src="Image/Icone/portrait_de_mariage_élégant_et_intime.png" alt="Mariés élégants en tenue traditionnelle">
+        </div>
+        <div>
+          <h3>Photos fortes</h3>
+          <p>La voiture doit aider à créer des images de mariage propres et mémorables.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <img src="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Instrument traditionnel">
+        </div>
+        <div>
+          <h3>Musique & danse</h3>
+          <p>L’ambiance du mariage reste vivante : bendir, gasba, danse et cortège.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <img src="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel élégant">
+        </div>
+        <div>
+          <h3>Chevaux & tradition</h3>
+          <p>Présence traditionnelle selon l’organisation du mariage, en décor émotionnel du cortège.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="galerie">
+  <div class="wrapper">
+    <div class="section-head">
+      <div>
+        <div class="kicker">Galerie</div>
+        <h2>Images du service</h2>
+      </div>
+      <p class="section-lead">
+        Une galerie pensée pour donner envie rapidement : voiture, cortège, mariés, ambiance, détails et tradition.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <a href="Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
+        <img src="Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png" alt="Mercedes et cortège chaoui">
+        <span>Arrivée principale</span>
+      </a>
+
+      <a href="Image/Site/07-section-detail-calandre-mercedes-et-fleurs.png">
+        <img src="Image/Site/07-section-detail-calandre-mercedes-et-fleurs.png" alt="Calandre Mercedes et fleurs">
+        <span>Détail voiture</span>
+      </a>
+
+      <a href="Image/Site/08-section-interieur-prestige-tenue-chaouie.png">
+        <img src="Image/Site/08-section-interieur-prestige-tenue-chaouie.png" alt="Intérieur prestige et tenue chaouie">
+        <span>Intérieur</span>
+      </a>
+
+      <a href="Image/Site/10-section-soiree-danse-chaouie-autour-de-la-mercedes.png">
+        <img src="Image/Site/10-section-soiree-danse-chaouie-autour-de-la-mercedes.png" alt="Soirée chaouie autour de la Mercedes">
+        <span>Soirée</span>
+      </a>
+
+      <a href="Image/Site/06-section-arrivee-locale-avec-musiciens.png">
+        <img src="Image/Site/06-section-arrivee-locale-avec-musiciens.png" alt="Arrivée locale avec musiciens">
+        <span>Musiciens</span>
+      </a>
+
+      <a href="Image/Site/09-section-details-bijoux-bouquet-et-mercedes.png">
+        <img src="Image/Site/09-section-details-bijoux-bouquet-et-mercedes.png" alt="Bijoux bouquet et Mercedes">
+        <span>Détails</span>
+      </a>
+
+      <a href="Image/Site/05-section-chevaux-baroud-et-mercedes.png">
+        <img src="Image/Site/05-section-chevaux-baroud-et-mercedes.png" alt="Chevaux et baroud avec Mercedes">
+        <span>Chevaux & tradition</span>
+      </a>
+
+      <a href="Image/Site/03-section-maries-tenue-chaouie-et-mercedes.png">
+        <img src="Image/Site/03-section-maries-tenue-chaouie-et-mercedes.png" alt="Mariés et Mercedes">
+        <span>Mariés</span>
+      </a>
+
+      <a href="Image/Site/04-section-cortege-mercedes-au-crepuscule.png">
+        <img src="Image/Site/04-section-cortege-mercedes-au-crepuscule.png" alt="Cortège Mercedes au crépuscule">
+        <span>Cortège</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrapper request">
+
+    <div class="request-box">
+      <div class="kicker">Demande rapide</div>
+      <h2>Envoyer les bonnes infos</h2>
+      <p class="section-lead">
+        Pour répondre vite, le client doit envoyer les informations utiles dès le premier message.
+      </p>
+
+      <div class="whatsapp-list">
+        <div>Date du mariage</div>
+        <div>Ville / quartier de départ</div>
+        <div>Lieu d’arrivée</div>
+        <div>Voiture seule ou avec chauffeur</div>
+        <div>Décoration souhaitée</div>
+        <div>Nombre de voitures pour le cortège</div>
+      </div>
+    </div>
+
+    <aside class="contact-card">
+      <div>
+        <div class="contact-line">
+          <small>WhatsApp</small>
+          <strong>0770 74 29 75</strong>
+        </div>
+
+        <div class="contact-line">
+          <small>Ville</small>
+          <strong>Khenchela</strong>
+        </div>
+
+        <div class="contact-line">
+          <small>Déplacement</small>
+          <strong>Sur devis</strong>
+        </div>
+
+        <div class="contact-line">
+          <small>TikTok</small>
+          <strong>@bida.auto</strong>
+        </div>
+      </div>
+
+      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
+        WhatsApp BIDA Prestige
+      </a>
+
+      <a class="btn dark" href="tel:+213770742975">
+        Appeler maintenant
+      </a>
+
+      <p class="notice">
+        BIDA Prestige est un service indépendant. Les véhicules disponibles, la décoration, les déplacements et le cortège se confirment selon la date et l’organisation du mariage.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrapper">
+    <strong>BIDA Prestige</strong> — Mariage • Chauffeur • Cortège • Auto prestige à Khenchela.
+    <br>
+    Service indépendant, non affilié officiellement à Mercedes-Benz. Les véhicules sont proposés selon disponibilité et conditions.
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn dark" href="tel:+213770742975">Appeler</a>
+  <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
 </body>
 </html>
