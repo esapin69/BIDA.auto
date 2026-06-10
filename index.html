@@ -3,27 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>BIDA Prestige — Mariage, chauffeur & cortège à Khenchela</title>
-<meta name="description" content="BIDA Prestige accompagne vos mariages à Khenchela : Mercedes décorée, chauffeur sérieux, cortège élégant et esprit chaoui. Contact WhatsApp direct.">
+<meta name="description" content="BIDA Prestige accompagne les mariages à Khenchela : Mercedes décorée, chauffeur sérieux, cortège élégant, ambiance chaouie et service prestige.">
 
 <meta property="og:title" content="BIDA Prestige — Mariage • Chauffeur • Cortège">
-<meta property="og:description" content="Mercedes prestige pour mariages chaouis, cortèges et événements à Khenchela.">
-<meta property="og:image" content="Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
+<meta property="og:description" content="Votre mariage mérite une arrivée à la hauteur : Mercedes propre, chauffeur sérieux, cortège élégant et esprit chaoui.">
+<meta property="og:image" content="https://bida-auto.pages.dev/Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
+<meta property="og:url" content="https://bida-auto.pages.dev">
 <meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BIDA Prestige — Mariage • Chauffeur • Cortège">
+<meta name="twitter:description" content="Mercedes prestige pour mariages chaouis, cortèges et événements à Khenchela.">
+<meta name="twitter:image" content="https://bida-auto.pages.dev/Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
+
+<link rel="icon" href="Image/Logo/03_Monogramme_B_BIDA_Auto.png">
+<link rel="apple-touch-icon" href="Image/Logo/00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png">
 
 <style>
 :root{
-  --black:#050505;
-  --black2:#10100f;
-  --panel:#151412;
-  --panel2:#1b1916;
-  --gold:#d8b35f;
-  --gold2:#f0d48a;
-  --cream:#f5efe2;
-  --muted:#beb5a5;
-  --line:rgba(216,179,95,.34);
-  --white:#fff;
-  --shadow:0 24px 80px rgba(0,0,0,.55);
+  --black:#040403;
+  --black2:#0b0a09;
+  --panel:#14120f;
+  --panel2:#1b1711;
+  --gold:#d6ad55;
+  --gold2:#f5d990;
+  --gold3:#8f6b24;
+  --cream:#f7efdf;
+  --muted:#c7bdac;
+  --soft:#a99f90;
+  --line:rgba(214,173,85,.34);
+  --white:#ffffff;
+  --shadow:0 28px 90px rgba(0,0,0,.62);
   --radius:28px;
 }
 
@@ -37,13 +49,13 @@ html{
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:
-    radial-gradient(circle at 15% 8%, rgba(216,179,95,.18), transparent 26%),
-    radial-gradient(circle at 88% 18%, rgba(216,179,95,.10), transparent 28%),
-    linear-gradient(180deg,#050505 0%,#080807 35%,#050505 100%);
   color:var(--cream);
+  background:
+    radial-gradient(circle at 18% 6%,rgba(214,173,85,.18),transparent 28%),
+    radial-gradient(circle at 88% 12%,rgba(214,173,85,.13),transparent 32%),
+    linear-gradient(180deg,#030303 0%,#0a0907 45%,#030303 100%);
   overflow-x:hidden;
-  padding-bottom:84px;
+  padding-bottom:86px;
 }
 
 img{
@@ -57,19 +69,19 @@ a{
 }
 
 .wrapper{
-  width:min(1180px, calc(100% - 32px));
+  width:min(1180px,calc(100% - 32px));
   margin:0 auto;
 }
 
 .topbar{
   position:fixed;
-  z-index:50;
   left:0;
   top:0;
   width:100%;
-  background:rgba(5,5,5,.72);
+  z-index:50;
+  background:rgba(4,4,3,.78);
   backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(216,179,95,.18);
+  border-bottom:1px solid rgba(214,173,85,.2);
 }
 
 .nav{
@@ -77,29 +89,49 @@ a{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
+  gap:18px;
 }
 
 .brand{
   display:flex;
-  flex-direction:column;
-  line-height:1;
+  align-items:center;
+  gap:14px;
+  min-width:0;
 }
 
-.brand strong{
+.logo{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#000;
+  border:1px solid rgba(214,173,85,.38);
+  box-shadow:0 8px 30px rgba(0,0,0,.45);
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+  min-width:0;
+}
+
+.brand-text strong{
   font-family:Georgia,"Times New Roman",serif;
   font-size:22px;
   letter-spacing:.08em;
   text-transform:uppercase;
   color:var(--cream);
+  white-space:nowrap;
 }
 
-.brand span{
+.brand-text span{
   margin-top:7px;
   font-size:11px;
   letter-spacing:.22em;
   text-transform:uppercase;
   color:var(--gold2);
+  white-space:nowrap;
 }
 
 .navlinks{
@@ -108,18 +140,17 @@ a{
   gap:10px;
 }
 
-.navlinks a{
-  font-weight:800;
-  font-size:14px;
+.navlinks a:not(.btn){
   color:var(--muted);
   padding:12px 14px;
-  border:1px solid transparent;
+  font-size:14px;
+  font-weight:850;
   border-radius:999px;
 }
 
-.navlinks a:hover{
+.navlinks a:not(.btn):hover{
+  background:rgba(255,255,255,.05);
   color:var(--cream);
-  border-color:var(--line);
 }
 
 .btn{
@@ -129,25 +160,25 @@ a{
   min-height:52px;
   padding:0 24px;
   border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
   font-weight:950;
   letter-spacing:.01em;
-  border:1px solid rgba(255,255,255,.12);
-  cursor:pointer;
-  transition:.18s ease;
   text-align:center;
   white-space:nowrap;
+  cursor:pointer;
+  transition:.18s ease;
 }
 
 .btn.gold{
-  color:#111;
-  background:linear-gradient(135deg,#f8dc8f 0%,#d8b35f 48%,#9b7930 100%);
-  box-shadow:0 12px 34px rgba(216,179,95,.22), inset 0 1px 0 rgba(255,255,255,.55);
+  color:#0a0702;
+  background:linear-gradient(135deg,#ffe59d 0%,#d6ad55 44%,#9a742c 100%);
+  box-shadow:0 12px 34px rgba(214,173,85,.24), inset 0 1px 0 rgba(255,255,255,.58);
 }
 
 .btn.dark{
-  color:var(--cream);
   background:rgba(255,255,255,.04);
-  border-color:rgba(216,179,95,.26);
+  color:var(--cream);
+  border-color:rgba(214,173,85,.28);
 }
 
 .btn:hover{
@@ -156,23 +187,22 @@ a{
 }
 
 .hero{
-  min-height:100svh;
   position:relative;
+  min-height:100svh;
+  padding:118px 0 52px;
   display:flex;
   align-items:flex-end;
-  padding:116px 0 44px;
   overflow:hidden;
 }
 
-.hero::before{
-  content:"";
+.hero-bg{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.55) 46%,rgba(0,0,0,.25) 100%),
-    linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 46%,rgba(0,0,0,.92) 100%),
+    linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.58) 43%,rgba(0,0,0,.2) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.22) 42%,rgba(0,0,0,.96) 100%),
     url("Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png") center/cover no-repeat;
-  transform:scale(1.02);
+  transform:scale(1.015);
 }
 
 .hero::after{
@@ -181,24 +211,35 @@ a{
   left:0;
   right:0;
   bottom:-1px;
-  height:160px;
+  height:180px;
   background:linear-gradient(180deg,transparent,var(--black));
+  pointer-events:none;
 }
 
 .hero-inner{
   position:relative;
   z-index:2;
-  width:min(850px,100%);
+  width:min(840px,100%);
+}
+
+.hero-logo{
+  width:112px;
+  height:112px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#000;
+  border:1px solid rgba(214,173,85,.42);
+  box-shadow:0 18px 60px rgba(0,0,0,.5);
+  margin-bottom:22px;
 }
 
 .pill{
   display:inline-flex;
   align-items:center;
-  gap:10px;
   padding:12px 18px;
   border-radius:999px;
   border:1px solid var(--line);
-  background:rgba(12,12,10,.58);
+  background:rgba(12,11,9,.6);
   color:var(--gold2);
   font-size:12px;
   font-weight:950;
@@ -207,32 +248,32 @@ a{
 }
 
 h1{
-  margin:28px 0 0;
+  margin:26px 0 0;
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(54px, 10vw, 118px);
+  font-size:clamp(54px,10vw,118px);
   line-height:.86;
   letter-spacing:-.055em;
   color:var(--cream);
   text-transform:uppercase;
-  text-shadow:0 12px 50px rgba(0,0,0,.7);
+  text-shadow:0 12px 50px rgba(0,0,0,.75);
 }
 
 .hero-sub{
   margin:24px 0 0;
-  font-size:clamp(22px, 4.8vw, 42px);
+  max-width:850px;
+  font-size:clamp(24px,4.8vw,44px);
   line-height:1.08;
-  max-width:900px;
-  color:#fff;
   font-weight:950;
+  color:#fff;
 }
 
 .hero-text{
-  margin:22px 0 0;
-  max-width:720px;
-  font-size:clamp(17px, 3.5vw, 24px);
+  margin:20px 0 0;
+  max-width:760px;
+  color:#e0d5c4;
+  font-size:clamp(17px,3.4vw,24px);
   line-height:1.46;
-  color:#ded4c5;
-  font-weight:650;
+  font-weight:680;
 }
 
 .hero-actions{
@@ -246,24 +287,24 @@ h1{
   margin-top:18px;
   color:var(--muted);
   font-size:14px;
-  line-height:1.45;
+  line-height:1.5;
 }
 
 .section{
   position:relative;
-  padding:64px 0;
+  padding:66px 0;
 }
 
 .section.tight{
-  padding-top:28px;
+  padding-top:30px;
 }
 
 .section-head{
   display:flex;
-  align-items:end;
   justify-content:space-between;
-  gap:22px;
-  margin-bottom:24px;
+  align-items:end;
+  gap:24px;
+  margin-bottom:26px;
 }
 
 .kicker{
@@ -277,14 +318,14 @@ h1{
 h2{
   margin:8px 0 0;
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(38px, 7vw, 72px);
+  font-size:clamp(38px,7vw,72px);
   line-height:.92;
   letter-spacing:-.04em;
   color:var(--cream);
 }
 
 .section-lead{
-  max-width:670px;
+  max-width:680px;
   color:var(--muted);
   font-size:18px;
   line-height:1.55;
@@ -293,26 +334,25 @@ h2{
 
 .story-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
+  grid-template-columns:1.18fr .82fr;
   gap:18px;
-  align-items:stretch;
 }
 
 .story-card{
   position:relative;
   overflow:hidden;
   border-radius:var(--radius);
-  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
-  border:1px solid rgba(216,179,95,.22);
+  background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));
+  border:1px solid rgba(214,173,85,.24);
   box-shadow:var(--shadow);
 }
 
 .story-card.big{
-  min-height:560px;
+  min-height:570px;
 }
 
 .story-card.small{
-  min-height:271px;
+  min-height:276px;
 }
 
 .story-card img{
@@ -327,7 +367,9 @@ h2{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.82));
+  background:
+    radial-gradient(circle at 70% 25%,transparent 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,.4) 100%),
+    linear-gradient(180deg,transparent 36%,rgba(0,0,0,.86));
 }
 
 .story-caption{
@@ -341,7 +383,7 @@ h2{
 .story-caption strong{
   display:block;
   font-family:Georgia,"Times New Roman",serif;
-  font-size:34px;
+  font-size:35px;
   line-height:1;
   letter-spacing:-.03em;
 }
@@ -349,108 +391,15 @@ h2{
 .story-caption span{
   display:block;
   margin-top:9px;
-  color:#e6ddce;
-  font-weight:700;
+  color:#efe4d4;
+  font-size:16px;
+  font-weight:740;
   line-height:1.45;
 }
 
 .side-stack{
   display:grid;
   gap:18px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.card{
-  position:relative;
-  overflow:hidden;
-  min-height:300px;
-  border-radius:var(--radius);
-  padding:24px;
-  background:
-    radial-gradient(circle at 96% 100%, rgba(216,179,95,.16), transparent 34%),
-    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-  border:1px solid rgba(216,179,95,.22);
-  box-shadow:0 18px 54px rgba(0,0,0,.36);
-}
-
-.card .visual{
-  height:132px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:18px;
-}
-
-.card .visual img{
-  max-height:132px;
-  object-fit:contain;
-  filter:drop-shadow(0 18px 28px rgba(0,0,0,.35));
-}
-
-.card h3{
-  margin:0;
-  font-size:26px;
-  line-height:1.05;
-  color:#fff;
-  letter-spacing:-.03em;
-}
-
-.card p{
-  margin:12px 0 0;
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.5;
-  font-weight:650;
-}
-
-.split{
-  display:grid;
-  grid-template-columns:.95fr 1.05fr;
-  gap:22px;
-  align-items:center;
-}
-
-.panel{
-  border:1px solid rgba(216,179,95,.24);
-  border-radius:calc(var(--radius) + 6px);
-  background:
-    radial-gradient(circle at 0 0, rgba(216,179,95,.15), transparent 34%),
-    linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.022));
-  box-shadow:var(--shadow);
-  padding:34px;
-}
-
-.panel h2{
-  margin-top:0;
-}
-
-.panel p{
-  color:#d6cbbc;
-  font-size:19px;
-  line-height:1.55;
-  font-weight:650;
-}
-
-.media{
-  overflow:hidden;
-  border-radius:calc(var(--radius) + 6px);
-  min-height:520px;
-  border:1px solid rgba(216,179,95,.2);
-  box-shadow:var(--shadow);
-  position:relative;
-}
-
-.media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  position:absolute;
-  inset:0;
 }
 
 .service-list{
@@ -462,12 +411,15 @@ h2{
 .service{
   display:grid;
   grid-template-columns:150px 1fr;
-  gap:18px;
   align-items:center;
+  gap:18px;
+  padding:20px;
   border-radius:var(--radius);
-  padding:22px;
-  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.022));
-  border:1px solid rgba(216,179,95,.22);
+  background:
+    radial-gradient(circle at 100% 100%,rgba(214,173,85,.14),transparent 38%),
+    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.022));
+  border:1px solid rgba(214,173,85,.24);
+  box-shadow:0 18px 54px rgba(0,0,0,.35);
 }
 
 .service-img{
@@ -477,8 +429,8 @@ h2{
   align-items:center;
   justify-content:center;
   border-radius:24px;
-  background:rgba(0,0,0,.23);
-  border:1px solid rgba(216,179,95,.18);
+  background:rgba(0,0,0,.26);
+  border:1px solid rgba(214,173,85,.18);
   overflow:hidden;
 }
 
@@ -486,22 +438,115 @@ h2{
   width:100%;
   height:100%;
   object-fit:contain;
-  padding:8px;
-  filter:drop-shadow(0 16px 20px rgba(0,0,0,.38));
+  padding:7px;
+  filter:drop-shadow(0 18px 24px rgba(0,0,0,.42));
 }
 
 .service h3{
   margin:0;
-  font-size:28px;
+  font-size:29px;
+  line-height:1.04;
+  color:#fff;
+  letter-spacing:-.035em;
+}
+
+.service p{
+  margin:11px 0 0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.48;
+  font-weight:670;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:22px;
+  align-items:center;
+}
+
+.panel{
+  padding:34px;
+  border-radius:calc(var(--radius) + 6px);
+  background:
+    radial-gradient(circle at 0 0,rgba(214,173,85,.16),transparent 34%),
+    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.022));
+  border:1px solid rgba(214,173,85,.28);
+  box-shadow:var(--shadow);
+}
+
+.panel h2{
+  margin-top:0;
+}
+
+.panel p{
+  color:#ddd1c0;
+  font-size:19px;
+  line-height:1.56;
+  font-weight:650;
+}
+
+.media{
+  min-height:520px;
+  overflow:hidden;
+  border-radius:calc(var(--radius) + 6px);
+  border:1px solid rgba(214,173,85,.24);
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+.media img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  min-height:325px;
+  padding:24px;
+  border-radius:var(--radius);
+  background:
+    radial-gradient(circle at 92% 100%,rgba(214,173,85,.15),transparent 38%),
+    linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.02));
+  border:1px solid rgba(214,173,85,.23);
+  box-shadow:0 18px 54px rgba(0,0,0,.34);
+}
+
+.card .visual{
+  height:142px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+.card .visual img{
+  max-height:142px;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 26px rgba(0,0,0,.44));
+}
+
+.card h3{
+  margin:0;
+  font-size:27px;
+  line-height:1.05;
   letter-spacing:-.035em;
   color:#fff;
 }
 
-.service p{
-  margin:10px 0 0;
+.card p{
+  margin:12px 0 0;
   color:var(--muted);
   font-size:16px;
-  line-height:1.48;
+  line-height:1.5;
   font-weight:650;
 }
 
@@ -516,8 +561,8 @@ h2{
   overflow:hidden;
   border-radius:22px;
   aspect-ratio:1/1;
-  border:1px solid rgba(216,179,95,.18);
   background:#111;
+  border:1px solid rgba(214,173,85,.18);
 }
 
 .gallery a:nth-child(1),
@@ -542,7 +587,7 @@ h2{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.65));
+  background:linear-gradient(180deg,transparent 54%,rgba(0,0,0,.72));
 }
 
 .gallery span{
@@ -553,7 +598,7 @@ h2{
   bottom:12px;
   color:#fff;
   font-size:14px;
-  font-weight:900;
+  font-weight:950;
   text-shadow:0 3px 14px #000;
 }
 
@@ -561,81 +606,79 @@ h2{
   display:grid;
   grid-template-columns:1fr .9fr;
   gap:22px;
-  align-items:stretch;
 }
 
-.request-box{
+.request-box,
+.contact-card{
   border-radius:calc(var(--radius) + 8px);
-  padding:34px;
-  background:
-    linear-gradient(180deg,rgba(216,179,95,.12),rgba(216,179,95,.035)),
-    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
-  border:1px solid rgba(216,179,95,.28);
+  border:1px solid rgba(214,173,85,.28);
   box-shadow:var(--shadow);
 }
 
-.request-box h2{
-  margin-top:0;
+.request-box{
+  padding:34px;
+  background:
+    linear-gradient(180deg,rgba(214,173,85,.12),rgba(214,173,85,.035)),
+    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
 }
 
-.whatsapp-list{
+.request-grid{
   display:grid;
-  gap:10px;
-  margin:22px 0 0;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:24px;
 }
 
-.whatsapp-list div{
+.request-grid div{
   padding:16px 18px;
   border-radius:18px;
   background:rgba(0,0,0,.28);
   border:1px solid rgba(255,255,255,.08);
   color:#e8dfd0;
-  font-weight:750;
+  font-weight:780;
 }
 
 .contact-card{
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  gap:18px;
-  border-radius:calc(var(--radius) + 8px);
+  gap:16px;
   padding:28px;
   background:#090908;
-  border:1px solid rgba(216,179,95,.28);
-  box-shadow:var(--shadow);
 }
 
 .contact-line{
-  border-radius:22px;
   padding:18px;
+  border-radius:22px;
   background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
   border:1px solid rgba(255,255,255,.08);
 }
 
 .contact-line small{
   display:block;
+  margin-bottom:8px;
   color:var(--gold2);
   font-size:13px;
   font-weight:950;
-  margin-bottom:8px;
 }
 
 .contact-line strong{
   display:block;
   font-size:24px;
+  color:#fff;
 }
 
 .notice{
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.08);
   color:var(--muted);
   font-size:14px;
   line-height:1.55;
-  border-top:1px solid rgba(255,255,255,.08);
-  padding-top:18px;
 }
 
 .footer{
   padding:30px 0 44px;
-  border-top:1px solid rgba(216,179,95,.18);
+  border-top:1px solid rgba(214,173,85,.18);
   color:var(--muted);
   font-size:13px;
   line-height:1.6;
@@ -661,30 +704,30 @@ h2{
 }
 
 @media(max-width:900px){
-  body{padding-bottom:86px}
+  .wrapper{width:min(100% - 28px,1180px)}
   .nav{height:72px}
+  .logo{width:52px;height:52px}
+  .brand-text strong{font-size:18px}
+  .brand-text span{font-size:9px}
   .navlinks a:not(.btn){display:none}
-  .brand strong{font-size:19px}
-  .brand span{font-size:10px}
+  .topbar .btn{min-height:44px;padding:0 16px;font-size:14px}
+
   .hero{
+    min-height:94svh;
     padding-top:96px;
-    min-height:92svh;
   }
-  .hero::before{
+
+  .hero-bg{
     background:
-      linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.68) 48%,rgba(0,0,0,.96) 100%),
+      linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,.66) 50%,rgba(0,0,0,.98) 100%),
       url("Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png") center/cover no-repeat;
   }
+
+  .hero-logo{width:96px;height:96px}
   .hero-actions .btn{width:100%}
-  .section{padding:42px 0}
-  .section-head{
-    display:block;
-    margin-bottom:18px;
-  }
-  .section-lead{
-    margin-top:14px;
-    font-size:16px;
-  }
+  .section{padding:44px 0}
+  .section-head{display:block}
+  .section-lead{margin-top:14px;font-size:16px}
   .story-grid,
   .split,
   .request{
@@ -692,10 +735,19 @@ h2{
   }
   .story-card.big{min-height:420px}
   .story-card.small{min-height:260px}
-  .cards,
-  .service-list{
+  .service-list,
+  .cards{
     grid-template-columns:1fr;
   }
+  .service{
+    grid-template-columns:112px 1fr;
+    padding:16px;
+  }
+  .service-img{
+    width:112px;
+    height:112px;
+  }
+  .service h3{font-size:23px}
   .card{
     min-height:auto;
     display:grid;
@@ -711,20 +763,7 @@ h2{
   .card .visual img{
     max-height:112px;
   }
-  .card h3{
-    font-size:24px;
-  }
-  .service{
-    grid-template-columns:112px 1fr;
-    padding:16px;
-  }
-  .service-img{
-    width:112px;
-    height:112px;
-  }
-  .service h3{font-size:23px}
   .media{min-height:360px}
-  .panel{padding:24px}
   .gallery{
     grid-template-columns:repeat(2,1fr);
   }
@@ -733,33 +772,37 @@ h2{
   .gallery a:nth-child(7){
     grid-column:span 2;
   }
+  .request-grid{
+    grid-template-columns:1fr;
+  }
   .mobile-cta{display:grid}
 }
 
 @media(max-width:520px){
-  .wrapper{width:min(100% - 24px,1180px)}
-  .topbar .btn{min-height:44px;padding:0 16px;font-size:14px}
+  .wrapper{width:min(100% - 22px,1180px)}
+  .brand-text span{display:none}
+  h1{font-size:58px}
   .hero-sub{font-size:28px}
   .hero-text{font-size:18px}
   .pill{font-size:10px;letter-spacing:.18em}
   .service,
   .card{
-    grid-template-columns:96px 1fr;
+    grid-template-columns:94px 1fr;
   }
   .service-img,
   .card .visual{
-    width:96px;
-    height:96px;
+    width:94px;
+    height:94px;
   }
   .card .visual img{
-    max-height:96px;
+    max-height:94px;
   }
-  .card h3,
-  .service h3{
+  .service h3,
+  .card h3{
     font-size:21px;
   }
-  .card p,
-  .service p{
+  .service p,
+  .card p{
     font-size:15px;
   }
 }
@@ -771,15 +814,23 @@ h2{
 <header class="topbar">
   <div class="wrapper nav">
     <a href="#" class="brand" aria-label="BIDA Prestige">
-      <strong>BIDA Prestige</strong>
-      <span>Khenchela • Algérie</span>
+      <img
+        class="logo js-img"
+        src="Image/Logo/00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png"
+        data-fallback="Image/Logo/01_Logo_Principal_BIDA_Auto_Mariage_Chauffeur.png|Image/Logo/03_Monogramme_B_BIDA_Auto.png"
+        alt="Logo BIDA Prestige"
+      >
+      <span class="brand-text">
+        <strong>BIDA Prestige</strong>
+        <span>Khenchela • Algérie</span>
+      </span>
     </a>
 
     <nav class="navlinks" aria-label="Navigation principale">
       <a href="#services">Services</a>
       <a href="#ambiance">Ambiance</a>
       <a href="#galerie">Galerie</a>
-      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20une%20voiture%20de%20mariage.%0AVille%20%3A%20%0ADate%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0AAvec%20chauffeur%20%3A%20oui%0AD%C3%A9coration%20%3A%20%C3%A0%20voir" target="_blank" rel="noopener">
+      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20une%20voiture%20de%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
         WhatsApp
       </a>
     </nav>
@@ -789,13 +840,22 @@ h2{
 <main>
 
 <section class="hero">
+  <div class="hero-bg"></div>
+
   <div class="wrapper hero-inner">
+    <img
+      class="hero-logo js-img"
+      src="Image/Logo/00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png"
+      data-fallback="Image/Logo/01_Logo_Principal_BIDA_Auto_Mariage_Chauffeur.png|Image/Logo/03_Monogramme_B_BIDA_Auto.png"
+      alt="BIDA Prestige"
+    >
+
     <div class="pill">Khenchela • Mariage chaoui • Mercedes prestige</div>
 
     <h1>BIDA<br>Prestige</h1>
 
     <div class="hero-sub">
-      Votre arrivée doit se voir.
+      Une arrivée qui marque le mariage.
     </div>
 
     <p class="hero-text">
@@ -823,11 +883,11 @@ h2{
   <div class="wrapper">
     <div class="section-head">
       <div>
-        <div class="kicker">Direction</div>
+        <div class="kicker">Esprit du site</div>
         <h2>Prestige chaoui moderne</h2>
       </div>
       <p class="section-lead">
-        Le site ne vend pas seulement une voiture. Il vend une arrivée : famille, cortège, musique, chevaux, baroud de fête en arrière-plan et Mercedes propre au centre.
+        Le site ne vend pas une voiture posée dans le vide. Il vend une arrivée : famille, musique, danse, chevaux, baroud de fête en arrière-plan et Mercedes propre au centre.
       </p>
     </div>
 
@@ -836,7 +896,7 @@ h2{
         <img src="Image/Site/02-section-ambiance-danse-chaouie-et-baroud.png" alt="Ambiance de mariage chaoui avec Mercedes et cortège à Khenchela">
         <div class="story-caption">
           <strong>Mariage vivant</strong>
-          <span>Un service pensé pour les vrais mariages algériens : mouvement, fierté, familles, cortège et traditions.</span>
+          <span>Un service pensé pour les vrais mariages algériens : mouvement, fierté, famille, cortège et tradition.</span>
         </div>
       </article>
 
@@ -844,7 +904,7 @@ h2{
         <article class="story-card small">
           <img src="Image/Site/03-section-maries-tenue-chaouie-et-mercedes.png" alt="Mariés en tenue élégante près d’une Mercedes décorée">
           <div class="story-caption">
-            <strong>Mariés</strong>
+            <strong>Les mariés</strong>
             <span>Une arrivée propre, posée, photographiable.</span>
           </div>
         </article>
@@ -852,7 +912,7 @@ h2{
         <article class="story-card small">
           <img src="Image/Site/05-section-chevaux-baroud-et-mercedes.png" alt="Chevaux, baroud et Mercedes lors d’un mariage">
           <div class="story-caption">
-            <strong>Tradition</strong>
+            <strong>La tradition</strong>
             <span>Chevaux, musique et baroud restent l’ambiance du mariage, pas une décoration vide.</span>
           </div>
         </article>
@@ -869,7 +929,7 @@ h2{
         <h2>Ce que BIDA Prestige apporte</h2>
       </div>
       <p class="section-lead">
-        Une offre claire : une belle voiture, une arrivée bien tenue, un chauffeur sérieux et une organisation adaptée au mariage.
+        Une offre simple et vendable : une belle voiture, une arrivée bien tenue, un chauffeur sérieux et une organisation adaptée au mariage.
       </p>
     </div>
 
@@ -877,7 +937,7 @@ h2{
 
       <article class="service">
         <div class="service-img">
-          <img src="Image/Icone/voiture_de_mariage_élégante_et_moderne.png" alt="Voiture de mariage décorée">
+          <img class="js-img" src="Image/Icone/voiture_de_mariage_e%CC%81le%CC%81gante_et_moderne.png" data-fallback="Image/Icone/voiture_de_mariage_élégante_et_moderne.png" alt="Voiture de mariage décorée">
         </div>
         <div>
           <h3>Voiture mariage</h3>
@@ -887,7 +947,7 @@ h2{
 
       <article class="service">
         <div class="service-img">
-          <img src="Image/Icone/voiture_de_luxe_et_chauffeur_élégant.png" alt="Chauffeur élégant avec voiture de luxe">
+          <img class="js-img" src="Image/Icone/voiture_de_luxe_et_chauffeur_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/voiture_de_luxe_et_chauffeur_élégant.png" alt="Chauffeur élégant avec voiture de luxe">
         </div>
         <div>
           <h3>Chauffeur sérieux</h3>
@@ -897,7 +957,7 @@ h2{
 
       <article class="service">
         <div class="service-img">
-          <img src="Image/Icone/défilé_nuptial_de_mercedes_de_luxe.png" alt="Cortège de Mercedes décorées">
+          <img class="js-img" src="Image/Icone/de%CC%81file%CC%81_nuptial_de_mercedes_de_luxe.png" data-fallback="Image/Icone/défilé_nuptial_de_mercedes_de_luxe.png" alt="Cortège de Mercedes décorées">
         </div>
         <div>
           <h3>Cortège coordonné</h3>
@@ -907,7 +967,7 @@ h2{
 
       <article class="service">
         <div class="service-img">
-          <img src="Image/Icone/anneaux_de_mariage_et_bouquet_élégant.png" alt="Anneaux de mariage et bouquet élégant">
+          <img class="js-img" src="Image/Icone/anneaux_de_mariage_et_bouquet_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/anneaux_de_mariage_et_bouquet_élégant.png" alt="Anneaux de mariage et bouquet élégant">
         </div>
         <div>
           <h3>Décoration mariage</h3>
@@ -917,7 +977,7 @@ h2{
 
       <article class="service">
         <div class="service-img">
-          <img src="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Bendir et gasba pour ambiance chaouie">
+          <img class="js-img" src="Image/Icone/instrument_et_tambour_avec_tissu_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Bendir et gasba pour ambiance chaouie">
         </div>
         <div>
           <h3>Ambiance locale</h3>
@@ -927,7 +987,7 @@ h2{
 
       <article class="service">
         <div class="service-img">
-          <img src="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel">
+          <img class="js-img" src="Image/Icone/cheval_blanc_majestueux_en_tenue_ce%CC%81re%CC%81monielle.png" data-fallback="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel">
         </div>
         <div>
           <h3>Arrivée prestige</h3>
@@ -969,7 +1029,7 @@ h2{
 
       <article class="card">
         <div class="visual">
-          <img src="Image/Icone/voiture_de_luxe_décorée_pour_un_mariage.png" alt="Détail Mercedes décorée">
+          <img class="js-img" src="Image/Icone/voiture_de_luxe_de%CC%81core%CC%81e_pour_un_mariage.png" data-fallback="Image/Icone/voiture_de_luxe_décorée_pour_un_mariage.png" alt="Détail Mercedes décorée">
         </div>
         <div>
           <h3>Voiture propre</h3>
@@ -979,7 +1039,7 @@ h2{
 
       <article class="card">
         <div class="visual">
-          <img src="Image/Icone/intérieur_de_voiture_de_luxe_avec_fleurs.png" alt="Intérieur de voiture avec fleurs">
+          <img class="js-img" src="Image/Icone/inte%CC%81rieur_de_voiture_de_luxe_avec_fleurs.png" data-fallback="Image/Icone/intérieur_de_voiture_de_luxe_avec_fleurs.png" alt="Intérieur de voiture avec fleurs">
         </div>
         <div>
           <h3>Intérieur soigné</h3>
@@ -989,7 +1049,7 @@ h2{
 
       <article class="card">
         <div class="visual">
-          <img src="Image/Icone/bijoux_en_argent_sur_fond_bleu_nuit.png" alt="Bijoux chaouis en argent">
+          <img class="js-img" src="Image/Icone/bijoux_en_argent_sur_fond_bleu_nuit.png" alt="Bijoux chaouis en argent">
         </div>
         <div>
           <h3>Esprit chaoui</h3>
@@ -999,7 +1059,7 @@ h2{
 
       <article class="card">
         <div class="visual">
-          <img src="Image/Icone/portrait_de_mariage_élégant_et_intime.png" alt="Mariés élégants en tenue traditionnelle">
+          <img class="js-img" src="Image/Icone/portrait_de_mariage_e%CC%81le%CC%81gant_et_intime.png" data-fallback="Image/Icone/portrait_de_mariage_élégant_et_intime.png" alt="Mariés élégants en tenue traditionnelle">
         </div>
         <div>
           <h3>Photos fortes</h3>
@@ -1009,7 +1069,7 @@ h2{
 
       <article class="card">
         <div class="visual">
-          <img src="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Instrument traditionnel">
+          <img class="js-img" src="Image/Icone/instrument_et_tambour_avec_tissu_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Instrument traditionnel">
         </div>
         <div>
           <h3>Musique & danse</h3>
@@ -1019,7 +1079,7 @@ h2{
 
       <article class="card">
         <div class="visual">
-          <img src="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel élégant">
+          <img class="js-img" src="Image/Icone/cheval_blanc_majestueux_en_tenue_ce%CC%81re%CC%81monielle.png" data-fallback="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel élégant">
         </div>
         <div>
           <h3>Chevaux & tradition</h3>
@@ -1039,7 +1099,7 @@ h2{
         <h2>Images du service</h2>
       </div>
       <p class="section-lead">
-        Une galerie pensée pour donner envie rapidement : voiture, cortège, mariés, ambiance, détails et tradition.
+        Une galerie pensée pour vendre vite : voiture, cortège, mariés, ambiance, détails et tradition.
       </p>
     </div>
 
@@ -1097,25 +1157,31 @@ h2{
 
     <div class="request-box">
       <div class="kicker">Demande rapide</div>
-      <h2>Envoyer les bonnes infos</h2>
+      <h2>Réserver ou demander un prix</h2>
       <p class="section-lead">
-        Pour répondre vite, le client doit envoyer les informations utiles dès le premier message.
+        Pour répondre correctement, le client doit envoyer les informations utiles dès le premier message.
       </p>
 
-      <div class="whatsapp-list">
+      <div class="request-grid">
         <div>Date du mariage</div>
-        <div>Ville / quartier de départ</div>
+        <div>Ville ou quartier de départ</div>
         <div>Lieu d’arrivée</div>
-        <div>Voiture seule ou avec chauffeur</div>
+        <div>Avec chauffeur ou sans chauffeur</div>
         <div>Décoration souhaitée</div>
         <div>Nombre de voitures pour le cortège</div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20un%20prix%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
+          Envoyer la demande
+        </a>
       </div>
     </div>
 
     <aside class="contact-card">
       <div>
         <div class="contact-line">
-          <small>WhatsApp</small>
+          <small>WhatsApp principal</small>
           <strong>0770 74 29 75</strong>
         </div>
 
@@ -1165,6 +1231,28 @@ h2{
   <a class="btn dark" href="tel:+213770742975">Appeler</a>
   <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20" target="_blank" rel="noopener">WhatsApp</a>
 </div>
+
+<script>
+(function(){
+  document.querySelectorAll("img.js-img").forEach(function(img){
+    var fallbacks = (img.getAttribute("data-fallback") || "")
+      .split("|")
+      .map(function(x){ return x.trim(); })
+      .filter(Boolean);
+
+    var index = 0;
+
+    img.onerror = function(){
+      if(index < fallbacks.length){
+        img.src = fallbacks[index];
+        index++;
+      }else{
+        img.style.opacity = "0";
+      }
+    };
+  });
+})();
+</script>
 
 </body>
 </html>
