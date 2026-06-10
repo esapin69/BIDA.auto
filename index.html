@@ -8,7 +8,7 @@
 <meta name="description" content="BIDA Prestige accompagne les mariages à Khenchela : Mercedes décorée, chauffeur sérieux, cortège élégant, ambiance chaouie et service prestige.">
 
 <meta property="og:title" content="BIDA Prestige — Mariage • Chauffeur • Cortège">
-<meta property="og:description" content="Votre mariage mérite une arrivée à la hauteur : Mercedes propre, chauffeur sérieux, cortège élégant et esprit chaoui.">
+<meta property="og:description" content="Mercedes décorée, chauffeur sérieux, cortège élégant et esprit chaoui à Khenchela.">
 <meta property="og:image" content="https://bida-auto.pages.dev/Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
 <meta property="og:url" content="https://bida-auto.pages.dev">
 <meta property="og:type" content="website">
@@ -73,6 +73,20 @@ a{
   margin:0 auto;
 }
 
+.ar{
+  direction:rtl;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.ar-line{
+  display:block;
+  margin-top:8px;
+  color:var(--gold2);
+  font-weight:900;
+  direction:rtl;
+  letter-spacing:0;
+}
+
 .topbar{
   position:fixed;
   left:0;
@@ -81,7 +95,6 @@ a{
   z-index:50;
   background:rgba(4,4,3,.78);
   backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(214,173,85,.2);
 }
 
@@ -220,7 +233,7 @@ a{
 .hero-inner{
   position:relative;
   z-index:2;
-  width:min(840px,100%);
+  width:min(860px,100%);
 }
 
 .hero-logo{
@@ -268,13 +281,24 @@ h1{
   color:#fff;
 }
 
+.hero-sub .ar-line{
+  font-size:clamp(22px,4.4vw,38px);
+}
+
 .hero-text{
   margin:20px 0 0;
-  max-width:760px;
+  max-width:780px;
   color:#e0d5c4;
   font-size:clamp(17px,3.4vw,24px);
   line-height:1.46;
   font-weight:680;
+}
+
+.hero-text .ar-line{
+  margin-top:12px;
+  font-size:clamp(18px,3.5vw,25px);
+  color:#f3dfaf;
+  line-height:1.55;
 }
 
 .hero-actions{
@@ -289,6 +313,11 @@ h1{
   color:var(--muted);
   font-size:14px;
   line-height:1.5;
+}
+
+.hero-note .ar-line{
+  font-size:15px;
+  color:#d9c79a;
 }
 
 .section{
@@ -325,12 +354,25 @@ h2{
   color:var(--cream);
 }
 
+h2 .ar-line{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+  font-size:clamp(26px,5vw,44px);
+  line-height:1.2;
+  letter-spacing:0;
+}
+
 .section-lead{
   max-width:680px;
   color:var(--muted);
   font-size:18px;
   line-height:1.55;
   font-weight:650;
+}
+
+.section-lead .ar-line{
+  margin-top:10px;
+  color:#dfc982;
+  font-size:18px;
 }
 
 .story-grid{
@@ -398,6 +440,12 @@ h2{
   line-height:1.45;
 }
 
+.story-caption .ar-line{
+  color:#f5d990;
+  font-size:17px;
+  margin-top:10px;
+}
+
 .side-stack{
   display:grid;
   gap:18px;
@@ -451,12 +499,23 @@ h2{
   letter-spacing:-.035em;
 }
 
+.service h3 .ar-line{
+  font-size:22px;
+  color:#f3d887;
+}
+
 .service p{
   margin:11px 0 0;
   color:var(--muted);
   font-size:16px;
   line-height:1.48;
   font-weight:670;
+}
+
+.service p .ar-line{
+  font-size:16px;
+  color:#d9c79a;
+  line-height:1.55;
 }
 
 .split{
@@ -485,6 +544,11 @@ h2{
   font-size:19px;
   line-height:1.56;
   font-weight:650;
+}
+
+.panel p .ar-line{
+  color:#e8d396;
+  font-size:18px;
 }
 
 .media{
@@ -543,12 +607,22 @@ h2{
   color:#fff;
 }
 
+.card h3 .ar-line{
+  font-size:21px;
+  color:#f3d887;
+}
+
 .card p{
   margin:12px 0 0;
   color:var(--muted);
   font-size:16px;
   line-height:1.5;
   font-weight:650;
+}
+
+.card p .ar-line{
+  color:#d9c79a;
+  font-size:16px;
 }
 
 .gallery{
@@ -603,6 +677,11 @@ h2{
   text-shadow:0 3px 14px #000;
 }
 
+.gallery span .ar-line{
+  font-size:14px;
+  color:#f5d990;
+}
+
 .request{
   display:grid;
   grid-template-columns:1fr .9fr;
@@ -637,6 +716,12 @@ h2{
   border:1px solid rgba(255,255,255,.08);
   color:#e8dfd0;
   font-weight:780;
+  line-height:1.45;
+}
+
+.request-grid .ar-line{
+  font-size:15px;
+  color:#f0d48a;
 }
 
 .contact-card{
@@ -677,6 +762,11 @@ h2{
   line-height:1.55;
 }
 
+.notice .ar-line{
+  color:#d9c79a;
+  font-size:14px;
+}
+
 .footer{
   padding:30px 0 44px;
   border-top:1px solid rgba(214,173,85,.18);
@@ -705,28 +795,13 @@ h2{
 }
 
 @media(max-width:900px){
-  body{
-    padding-bottom:108px;
-  }
-
   .wrapper{width:min(100% - 28px,1180px)}
   .nav{height:72px}
   .logo{width:52px;height:52px}
   .brand-text strong{font-size:18px}
   .brand-text span{font-size:9px}
-
-  /* MOBILE STABLE : un seul CTA visible = barre du bas */
-  .navlinks{
-    display:none;
-  }
-
-  .hero-actions{
-    display:none !important;
-  }
-
-  .contact-card > a.btn{
-    display:none !important;
-  }
+  .navlinks a:not(.btn){display:none}
+  .topbar .btn{min-height:44px;padding:0 16px;font-size:14px}
 
   .hero{
     min-height:94svh;
@@ -740,6 +815,7 @@ h2{
   }
 
   .hero-logo{width:96px;height:96px}
+  .hero-actions .btn{width:100%}
   .section{padding:44px 0}
   .section-head{display:block}
   .section-lead{margin-top:14px;font-size:16px}
@@ -845,8 +921,8 @@ h2{
       <a href="#services">Services</a>
       <a href="#ambiance">Ambiance</a>
       <a href="#galerie">Galerie</a>
-      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20une%20voiture%20de%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
-        WhatsApp
+      <a class="btn gold wa-link" href="#" target="_blank" rel="noopener">
+        WhatsApp / راسلنا
       </a>
     </nav>
   </div>
@@ -871,16 +947,18 @@ h2{
 
     <div class="hero-sub">
       Une arrivée qui marque le mariage.
+      <span class="ar-line ar">دخلة تليق بالعرس</span>
     </div>
 
     <p class="hero-text">
       Mercedes décorée, chauffeur sérieux, cortège propre et ambiance chaouie.
       BIDA Prestige accompagne les mariages, fiançailles et événements à Khenchela avec une présence élégante, locale et fiable.
+      <span class="ar-line ar">مرسيدس مزينة، سائق محترم، كورتيج منظم، وأجواء شاوية أصيلة.</span>
     </p>
 
     <div class="hero-actions">
-      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20r%C3%A9server%20ou%20demander%20un%20prix%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
-        Demander sur WhatsApp
+      <a class="btn gold wa-link" href="#" target="_blank" rel="noopener">
+        راسلنا على WhatsApp
       </a>
 
       <a class="btn dark" href="tel:+213770742975">
@@ -890,6 +968,7 @@ h2{
 
     <p class="hero-note">
       Prestation sur devis selon la date, la distance, le véhicule disponible, la décoration et l’organisation du cortège.
+      <span class="ar-line ar">الخدمة حسب التاريخ، المسافة، السيارة المتوفرة، التزيين وتنظيم الكورتيج.</span>
     </p>
   </div>
 </section>
@@ -899,10 +978,14 @@ h2{
     <div class="section-head">
       <div>
         <div class="kicker">Esprit du site</div>
-        <h2>Prestige chaoui moderne</h2>
+        <h2>
+          Prestige chaoui moderne
+          <span class="ar-line ar">فخامة شاوية عصرية</span>
+        </h2>
       </div>
       <p class="section-lead">
         Le site ne vend pas une voiture posée dans le vide. Il vend une arrivée : famille, musique, danse, chevaux, baroud de fête en arrière-plan et Mercedes propre au centre.
+        <span class="ar-line ar">الخدمة ماشي غير سيارة، هي دخلة العرس: العائلة، الموسيقى، الرقص، الخيل، البارود والمرسيدس في الوسط.</span>
       </p>
     </div>
 
@@ -912,6 +995,7 @@ h2{
         <div class="story-caption">
           <strong>Mariage vivant</strong>
           <span>Un service pensé pour les vrais mariages algériens : mouvement, fierté, famille, cortège et tradition.</span>
+          <span class="ar-line ar">عرس حيّ، فيه حركة، فخر، عائلة وتقاليد.</span>
         </div>
       </article>
 
@@ -921,6 +1005,7 @@ h2{
           <div class="story-caption">
             <strong>Les mariés</strong>
             <span>Une arrivée propre, posée, photographiable.</span>
+            <span class="ar-line ar">دخلة نظيفة تصلح للصور والفيديو.</span>
           </div>
         </article>
 
@@ -929,6 +1014,7 @@ h2{
           <div class="story-caption">
             <strong>La tradition</strong>
             <span>Chevaux, musique et baroud restent l’ambiance du mariage, pas une décoration vide.</span>
+            <span class="ar-line ar">الخيل والبارود والموسيقى جزء من روح العرس.</span>
           </div>
         </article>
       </div>
@@ -941,10 +1027,14 @@ h2{
     <div class="section-head">
       <div>
         <div class="kicker">Services</div>
-        <h2>Ce que BIDA Prestige apporte</h2>
+        <h2>
+          Ce que BIDA Prestige apporte
+          <span class="ar-line ar">خدمة سيارة محترمة للعرس والكورتيج</span>
+        </h2>
       </div>
       <p class="section-lead">
         Une offre simple et vendable : une belle voiture, une arrivée bien tenue, un chauffeur sérieux et une organisation adaptée au mariage.
+        <span class="ar-line ar">سيارة جميلة، سائق محترم، وتنظيم يناسب العرس.</span>
       </p>
     </div>
 
@@ -955,8 +1045,10 @@ h2{
           <img class="js-img" src="Image/Icone/voiture_de_mariage_e%CC%81le%CC%81gante_et_moderne.png" data-fallback="Image/Icone/voiture_de_mariage_élégante_et_moderne.png" alt="Voiture de mariage décorée">
         </div>
         <div>
-          <h3>Voiture mariage</h3>
-          <p>Mercedes décorée pour l’arrivée des mariés, les photos et les déplacements importants de la journée.</p>
+          <h3>Voiture mariage <span class="ar-line ar">سيارة العرس</span></h3>
+          <p>Mercedes décorée pour l’arrivée des mariés, les photos et les déplacements importants de la journée.
+            <span class="ar-line ar">مرسيدس مزينة للدخلة، الصور والتنقلات المهمة.</span>
+          </p>
         </div>
       </article>
 
@@ -965,8 +1057,10 @@ h2{
           <img class="js-img" src="Image/Icone/voiture_de_luxe_et_chauffeur_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/voiture_de_luxe_et_chauffeur_élégant.png" alt="Chauffeur élégant avec voiture de luxe">
         </div>
         <div>
-          <h3>Chauffeur sérieux</h3>
-          <p>Conduite propre, présence discrète, respect des horaires et accompagnement des mariés.</p>
+          <h3>Chauffeur sérieux <span class="ar-line ar">سائق محترم</span></h3>
+          <p>Conduite propre, présence discrète, respect des horaires et accompagnement des mariés.
+            <span class="ar-line ar">سياقة نظيفة، حضور محترم، واحترام الوقت.</span>
+          </p>
         </div>
       </article>
 
@@ -975,8 +1069,10 @@ h2{
           <img class="js-img" src="Image/Icone/de%CC%81file%CC%81_nuptial_de_mercedes_de_luxe.png" data-fallback="Image/Icone/défilé_nuptial_de_mercedes_de_luxe.png" alt="Cortège de Mercedes décorées">
         </div>
         <div>
-          <h3>Cortège coordonné</h3>
-          <p>Plusieurs voitures possibles selon disponibilité, pour une arrivée organisée et plus impressionnante.</p>
+          <h3>Cortège coordonné <span class="ar-line ar">كورتيج منظم</span></h3>
+          <p>Plusieurs voitures possibles selon disponibilité, pour une arrivée organisée et plus impressionnante.
+            <span class="ar-line ar">عدة سيارات حسب التوفر، لدخلة منظمة وقوية.</span>
+          </p>
         </div>
       </article>
 
@@ -985,8 +1081,10 @@ h2{
           <img class="js-img" src="Image/Icone/anneaux_de_mariage_et_bouquet_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/anneaux_de_mariage_et_bouquet_élégant.png" alt="Anneaux de mariage et bouquet élégant">
         </div>
         <div>
-          <h3>Décoration mariage</h3>
-          <p>Fleurs, rubans et détails élégants selon le style demandé : sobre, visible et adapté aux photos.</p>
+          <h3>Décoration mariage <span class="ar-line ar">تزيين السيارة</span></h3>
+          <p>Fleurs, rubans et détails élégants selon le style demandé : sobre, visible et adapté aux photos.
+            <span class="ar-line ar">ورود، شرائط وتفاصيل أنيقة حسب الطلب.</span>
+          </p>
         </div>
       </article>
 
@@ -995,8 +1093,10 @@ h2{
           <img class="js-img" src="Image/Icone/instrument_et_tambour_avec_tissu_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Bendir et gasba pour ambiance chaouie">
         </div>
         <div>
-          <h3>Ambiance locale</h3>
-          <p>Le service s’inscrit dans les mariages de Khenchela : musique, danse, famille et esprit chaoui.</p>
+          <h3>Ambiance locale <span class="ar-line ar">أجواء شاوية</span></h3>
+          <p>Le service s’inscrit dans les mariages de Khenchela : musique, danse, famille et esprit chaoui.
+            <span class="ar-line ar">موسيقى، رقصة، عائلة وروح شاوية.</span>
+          </p>
         </div>
       </article>
 
@@ -1005,8 +1105,10 @@ h2{
           <img class="js-img" src="Image/Icone/cheval_blanc_majestueux_en_tenue_ce%CC%81re%CC%81monielle.png" data-fallback="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel">
         </div>
         <div>
-          <h3>Arrivée prestige</h3>
-          <p>La voiture reste le centre du service, avec une mise en scène qui respecte l’énergie du mariage.</p>
+          <h3>Arrivée prestige <span class="ar-line ar">دخلة بريستيج</span></h3>
+          <p>La voiture reste le centre du service, avec une mise en scène qui respecte l’énergie du mariage.
+            <span class="ar-line ar">السيارة في قلب الدخلة، مع احترام جو العرس.</span>
+          </p>
         </div>
       </article>
 
@@ -1018,16 +1120,21 @@ h2{
   <div class="wrapper split">
     <div class="panel">
       <div class="kicker">L’arrivée</div>
-      <h2>La Mercedes au centre du cortège</h2>
+      <h2>
+        La Mercedes au centre du cortège
+        <span class="ar-line ar">المرسيدس في قلب دخلة العرس</span>
+      </h2>
       <p>
         Dans un mariage à Khenchela, l’arrivée compte. BIDA Prestige place la Mercedes au centre : voiture propre, décoration visible, chauffeur présent, cortège suivi et ambiance respectée.
+        <span class="ar-line ar">في عرس خنشلة، الدخلة مهمة: سيارة نظيفة، تزيين واضح، سائق حاضر وكورتيج منظم.</span>
       </p>
       <p>
         Le but n’est pas de faire une location froide. Le but est d’accompagner un moment de famille, de fierté et de fête.
+        <span class="ar-line ar">الخدمة ماشي كراء بارد، الخدمة مرافقة للحظة فخر وفرحة العائلة.</span>
       </p>
       <div class="hero-actions">
-        <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20organiser%20un%20cort%C3%A8ge%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0ANombre%20de%20voitures%20%3A%20" target="_blank" rel="noopener">
-          Organiser le cortège
+        <a class="btn gold wa-link" href="#" target="_blank" rel="noopener">
+          Organiser le cortège / نظم الكورتيج
         </a>
       </div>
     </div>
@@ -1047,8 +1154,10 @@ h2{
           <img class="js-img" src="Image/Icone/voiture_de_luxe_de%CC%81core%CC%81e_pour_un_mariage.png" data-fallback="Image/Icone/voiture_de_luxe_décorée_pour_un_mariage.png" alt="Détail Mercedes décorée">
         </div>
         <div>
-          <h3>Voiture propre</h3>
-          <p>Une image nette pour les photos, les vidéos et l’arrivée devant la famille.</p>
+          <h3>Voiture propre <span class="ar-line ar">سيارة نظيفة</span></h3>
+          <p>Une image nette pour les photos, les vidéos et l’arrivée devant la famille.
+            <span class="ar-line ar">صورة قوية للصور والفيديو والدخلة قدام العائلة.</span>
+          </p>
         </div>
       </article>
 
@@ -1057,8 +1166,10 @@ h2{
           <img class="js-img" src="Image/Icone/inte%CC%81rieur_de_voiture_de_luxe_avec_fleurs.png" data-fallback="Image/Icone/intérieur_de_voiture_de_luxe_avec_fleurs.png" alt="Intérieur de voiture avec fleurs">
         </div>
         <div>
-          <h3>Intérieur soigné</h3>
-          <p>Une voiture présentable, confortable et adaptée aux mariés.</p>
+          <h3>Intérieur soigné <span class="ar-line ar">داخلية مرتبة</span></h3>
+          <p>Une voiture présentable, confortable et adaptée aux mariés.
+            <span class="ar-line ar">راحة ونظافة للعرسان والتنقلات المهمة.</span>
+          </p>
         </div>
       </article>
 
@@ -1067,8 +1178,10 @@ h2{
           <img class="js-img" src="Image/Icone/bijoux_en_argent_sur_fond_bleu_nuit.png" alt="Bijoux chaouis en argent">
         </div>
         <div>
-          <h3>Esprit chaoui</h3>
-          <p>Une direction visuelle qui respecte les codes locaux : bijoux, tenue, bleu profond et argent.</p>
+          <h3>Esprit chaoui <span class="ar-line ar">روح شاوية</span></h3>
+          <p>Une direction visuelle qui respecte les codes locaux : bijoux, tenue, bleu profond et argent.
+            <span class="ar-line ar">ألوان، حلي، لباس وتفاصيل من روح المنطقة.</span>
+          </p>
         </div>
       </article>
 
@@ -1077,8 +1190,10 @@ h2{
           <img class="js-img" src="Image/Icone/portrait_de_mariage_e%CC%81le%CC%81gant_et_intime.png" data-fallback="Image/Icone/portrait_de_mariage_élégant_et_intime.png" alt="Mariés élégants en tenue traditionnelle">
         </div>
         <div>
-          <h3>Photos fortes</h3>
-          <p>La voiture doit aider à créer des images de mariage propres et mémorables.</p>
+          <h3>Photos fortes <span class="ar-line ar">صور قوية</span></h3>
+          <p>La voiture doit aider à créer des images de mariage propres et mémorables.
+            <span class="ar-line ar">الدخلة لازم تبقى ذكرى في الصور والفيديو.</span>
+          </p>
         </div>
       </article>
 
@@ -1087,8 +1202,10 @@ h2{
           <img class="js-img" src="Image/Icone/instrument_et_tambour_avec_tissu_e%CC%81le%CC%81gant.png" data-fallback="Image/Icone/instrument_et_tambour_avec_tissu_élégant.png" alt="Instrument traditionnel">
         </div>
         <div>
-          <h3>Musique & danse</h3>
-          <p>L’ambiance du mariage reste vivante : bendir, gasba, danse et cortège.</p>
+          <h3>Musique & danse <span class="ar-line ar">موسيقى ورقص</span></h3>
+          <p>L’ambiance du mariage reste vivante : bendir, gasba, danse et cortège.
+            <span class="ar-line ar">البندير، القصبة، الرقصة والكورتيج.</span>
+          </p>
         </div>
       </article>
 
@@ -1097,8 +1214,10 @@ h2{
           <img class="js-img" src="Image/Icone/cheval_blanc_majestueux_en_tenue_ce%CC%81re%CC%81monielle.png" data-fallback="Image/Icone/cheval_blanc_majestueux_en_tenue_cérémonielle.png" alt="Cheval cérémoniel élégant">
         </div>
         <div>
-          <h3>Chevaux & tradition</h3>
-          <p>Présence traditionnelle selon l’organisation du mariage, en décor émotionnel du cortège.</p>
+          <h3>Chevaux & tradition <span class="ar-line ar">الخيل والتقاليد</span></h3>
+          <p>Présence traditionnelle selon l’organisation du mariage, en décor émotionnel du cortège.
+            <span class="ar-line ar">حضور تقليدي حسب تنظيم العرس.</span>
+          </p>
         </div>
       </article>
 
@@ -1111,57 +1230,61 @@ h2{
     <div class="section-head">
       <div>
         <div class="kicker">Galerie</div>
-        <h2>Images du service</h2>
+        <h2>
+          Images du service
+          <span class="ar-line ar">صور الخدمة والأجواء</span>
+        </h2>
       </div>
       <p class="section-lead">
         Une galerie pensée pour vendre vite : voiture, cortège, mariés, ambiance, détails et tradition.
+        <span class="ar-line ar">سيارة، كورتيج، عرسان، أجواء وتفاصيل العرس.</span>
       </p>
     </div>
 
     <div class="gallery">
       <a href="Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png">
         <img src="Image/Site/01-hero-mercedes-cortege-chaoui-khenchela.png" alt="Mercedes et cortège chaoui">
-        <span>Arrivée principale</span>
+        <span>Arrivée principale <span class="ar-line ar">الدخلة الرئيسية</span></span>
       </a>
 
       <a href="Image/Site/07-section-detail-calandre-mercedes-et-fleurs.png">
         <img src="Image/Site/07-section-detail-calandre-mercedes-et-fleurs.png" alt="Calandre Mercedes et fleurs">
-        <span>Détail voiture</span>
+        <span>Détail voiture <span class="ar-line ar">تفاصيل السيارة</span></span>
       </a>
 
       <a href="Image/Site/08-section-interieur-prestige-tenue-chaouie.png">
         <img src="Image/Site/08-section-interieur-prestige-tenue-chaouie.png" alt="Intérieur prestige et tenue chaouie">
-        <span>Intérieur</span>
+        <span>Intérieur <span class="ar-line ar">الداخلية</span></span>
       </a>
 
       <a href="Image/Site/10-section-soiree-danse-chaouie-autour-de-la-mercedes.png">
         <img src="Image/Site/10-section-soiree-danse-chaouie-autour-de-la-mercedes.png" alt="Soirée chaouie autour de la Mercedes">
-        <span>Soirée</span>
+        <span>Soirée <span class="ar-line ar">أجواء السهرة</span></span>
       </a>
 
       <a href="Image/Site/06-section-arrivee-locale-avec-musiciens.png">
         <img src="Image/Site/06-section-arrivee-locale-avec-musiciens.png" alt="Arrivée locale avec musiciens">
-        <span>Musiciens</span>
+        <span>Musiciens <span class="ar-line ar">الموسيقى</span></span>
       </a>
 
       <a href="Image/Site/09-section-details-bijoux-bouquet-et-mercedes.png">
         <img src="Image/Site/09-section-details-bijoux-bouquet-et-mercedes.png" alt="Bijoux bouquet et Mercedes">
-        <span>Détails</span>
+        <span>Détails <span class="ar-line ar">تفاصيل العرس</span></span>
       </a>
 
       <a href="Image/Site/05-section-chevaux-baroud-et-mercedes.png">
         <img src="Image/Site/05-section-chevaux-baroud-et-mercedes.png" alt="Chevaux et baroud avec Mercedes">
-        <span>Chevaux & tradition</span>
+        <span>Chevaux & tradition <span class="ar-line ar">الخيل والتقاليد</span></span>
       </a>
 
       <a href="Image/Site/03-section-maries-tenue-chaouie-et-mercedes.png">
         <img src="Image/Site/03-section-maries-tenue-chaouie-et-mercedes.png" alt="Mariés et Mercedes">
-        <span>Mariés</span>
+        <span>Mariés <span class="ar-line ar">العرسان</span></span>
       </a>
 
       <a href="Image/Site/04-section-cortege-mercedes-au-crepuscule.png">
         <img src="Image/Site/04-section-cortege-mercedes-au-crepuscule.png" alt="Cortège Mercedes au crépuscule">
-        <span>Cortège</span>
+        <span>Cortège <span class="ar-line ar">الكورتيج</span></span>
       </a>
     </div>
   </div>
@@ -1172,23 +1295,27 @@ h2{
 
     <div class="request-box">
       <div class="kicker">Demande rapide</div>
-      <h2>Réserver ou demander un prix</h2>
+      <h2>
+        Réserver ou demander un prix
+        <span class="ar-line ar">أرسل معلومات العرس وخذ السعر</span>
+      </h2>
       <p class="section-lead">
         Pour répondre correctement, le client doit envoyer les informations utiles dès le premier message.
+        <span class="ar-line ar">باش نجاوبوك بسرعة، ابعث معلومات العرس في أول رسالة.</span>
       </p>
 
       <div class="request-grid">
-        <div>Date du mariage</div>
-        <div>Ville ou quartier de départ</div>
-        <div>Lieu d’arrivée</div>
-        <div>Avec chauffeur ou sans chauffeur</div>
-        <div>Décoration souhaitée</div>
-        <div>Nombre de voitures pour le cortège</div>
+        <div>Date du mariage <span class="ar-line ar">تاريخ العرس</span></div>
+        <div>Ville ou quartier de départ <span class="ar-line ar">مكان الانطلاق</span></div>
+        <div>Lieu d’arrivée <span class="ar-line ar">مكان الوصول</span></div>
+        <div>Avec chauffeur ou sans chauffeur <span class="ar-line ar">مع سائق أو بدون</span></div>
+        <div>Décoration souhaitée <span class="ar-line ar">التزيين المطلوب</span></div>
+        <div>Nombre de voitures <span class="ar-line ar">عدد السيارات</span></div>
       </div>
 
       <div class="hero-actions">
-        <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20un%20prix%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
-          Envoyer la demande
+        <a class="btn gold wa-link" href="#" target="_blank" rel="noopener">
+          Envoyer la demande / أرسل الطلب
         </a>
       </div>
     </div>
@@ -1201,13 +1328,13 @@ h2{
         </div>
 
         <div class="contact-line">
-          <small>Ville</small>
-          <strong>Khenchela</strong>
+          <small>Ville / المدينة</small>
+          <strong>Khenchela — خنشلة</strong>
         </div>
 
         <div class="contact-line">
-          <small>Déplacement</small>
-          <strong>Sur devis</strong>
+          <small>Déplacement / التنقل</small>
+          <strong>Sur devis — حسب الطلب</strong>
         </div>
 
         <div class="contact-line">
@@ -1216,7 +1343,7 @@ h2{
         </div>
       </div>
 
-      <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20%0ANombre%20de%20voitures%20%3A%20%0AD%C3%A9coration%20%3A%20" target="_blank" rel="noopener">
+      <a class="btn gold wa-link" href="#" target="_blank" rel="noopener">
         WhatsApp BIDA Prestige
       </a>
 
@@ -1226,6 +1353,7 @@ h2{
 
       <p class="notice">
         BIDA Prestige est un service indépendant. Les véhicules disponibles, la décoration, les déplacements et le cortège se confirment selon la date et l’organisation du mariage.
+        <span class="ar-line ar">BIDA Prestige خدمة مستقلة. السيارة، التزيين، التنقل والكورتيج يتأكدوا حسب التاريخ والتنظيم.</span>
       </p>
     </aside>
 
@@ -1238,13 +1366,15 @@ h2{
   <div class="wrapper">
     <strong>BIDA Prestige</strong> — Mariage • Chauffeur • Cortège • Auto prestige à Khenchela.
     <br>
+    <span class="ar ar-line">عرس • سائق • كورتيج • سيارة بريستيج في خنشلة</span>
+    <br>
     Service indépendant, non affilié officiellement à Mercedes-Benz. Les véhicules sont proposés selon disponibilité et conditions.
   </div>
 </footer>
 
 <div class="mobile-cta">
   <a class="btn dark" href="tel:+213770742975">Appeler</a>
-  <a class="btn gold" href="https://wa.me/213770742975?text=Salam%20BIDA%20Prestige%2C%20je%20veux%20des%20infos%20pour%20un%20mariage.%0ADate%20%3A%20%0AVille%20%3A%20%0AD%C3%A9part%20%3A%20%0AArriv%C3%A9e%20%3A%20" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn gold wa-link" href="#" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
 <script>
@@ -1265,6 +1395,25 @@ h2{
         img.style.opacity = "0";
       }
     };
+  });
+
+  var phone = "213770742975";
+  var message =
+`Salam BIDA Prestige,
+نحب نعرف السعر لسيارة عرس.
+
+Date / التاريخ :
+Ville / المدينة :
+Départ / الانطلاق :
+Arrivée / الوصول :
+Avec chauffeur / مع سائق :
+Décoration / التزيين :
+Nombre de voitures / عدد السيارات :`;
+
+  var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  document.querySelectorAll(".wa-link").forEach(function(link){
+    link.href = url;
   });
 })();
 </script>
