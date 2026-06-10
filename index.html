@@ -4,438 +4,448 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>BIDA Prestige — Mercedes mariage avec chauffeur à Khenchela</title>
-  <meta name="description" content="BIDA Prestige accompagne vos mariages, fiançailles et événements à Khenchela : Mercedes décorée, chauffeur sérieux, cortège propre et déplacement possible sur devis.">
+  <meta name="description" content="BIDA Prestige — Location Mercedes mariage avec chauffeur à Khenchela. Cortège, décoration, événement, déplacement sur devis.">
   <meta name="theme-color" content="#070604">
 
-  <!-- IMPORTANT :
-       Je ne joins aucune image dans ce fichier.
-       Garde ton logo déjà en place.
-       Si ton logo a un autre chemin, modifie seulement cette ligne :
-       const LOGO_SRC = "assets/logo-bida-prestige.jpg";
-  -->
-
   <style>
-    :root {
-      --logo-src: url("assets/logo-bida-prestige.jpg");
-      --black: #050403;
-      --cream: #fff3df;
-      --muted: rgba(255, 243, 223, 0.76);
-      --muted-2: rgba(255, 243, 223, 0.58);
-      --gold: #c79a3d;
-      --gold-light: #ffe7a0;
-      --line: rgba(255, 220, 145, 0.24);
-      --header-h: 72px;
-      --bottom-h: 92px;
+    :root{
+      --black:#050403;
+      --cream:#fff3df;
+      --muted:rgba(255,243,223,.76);
+      --soft:rgba(255,243,223,.58);
+      --gold:#c89a3d;
+      --gold2:#ffe7a0;
+      --line:rgba(255,220,145,.24);
+      --header:72px;
+      --bottom:94px;
+      --hero-img:none;
     }
 
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--black);
-    }
-
-    body {
-      margin: 0;
-      color: var(--cream);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--black)}
+    body{
+      margin:0;
+      color:var(--cream);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       background:
-        radial-gradient(circle at 20% 0%, rgba(199, 154, 61, 0.18), transparent 320px),
-        linear-gradient(180deg, #070604 0%, #020202 100%);
-      padding-bottom: calc(var(--bottom-h) + env(safe-area-inset-bottom));
-      overflow-x: hidden;
+        radial-gradient(circle at 16% 0%,rgba(255,220,145,.18),transparent 320px),
+        radial-gradient(circle at 88% 8%,rgba(255,255,255,.08),transparent 280px),
+        linear-gradient(180deg,#080705 0%,#010101 100%);
+      padding-bottom:calc(var(--bottom) + env(safe-area-inset-bottom));
+      overflow-x:hidden;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
 
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: calc(var(--header-h) + env(safe-area-inset-top));
-      padding: env(safe-area-inset-top) 16px 0;
-      z-index: 50;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(8, 7, 5, 0.92);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+    .site-header{
+      position:fixed;
+      top:0;left:0;right:0;
+      height:calc(var(--header) + env(safe-area-inset-top));
+      padding:env(safe-area-inset-top) 16px 0;
+      z-index:80;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      background:rgba(7,6,4,.91);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
     }
 
-    .brand img {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid rgba(255, 230, 170, 0.35);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.42);
-      flex: 0 0 auto;
+    .brand-logo{
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      object-fit:cover;
+      border:1px solid rgba(255,230,170,.38);
+      box-shadow:0 9px 26px rgba(0,0,0,.5);
+      background:linear-gradient(135deg,#18130c,#030303);
+      flex:0 0 auto;
     }
 
-    .brand-name {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(20px, 6vw, 30px);
-      line-height: 1;
-      letter-spacing: 0.12em;
-      font-weight: 900;
-      text-transform: uppercase;
-      white-space: nowrap;
+    .brand-title{
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(20px,5.9vw,29px);
+      line-height:.95;
+      letter-spacing:.105em;
+      font-weight:900;
+      text-transform:uppercase;
+      white-space:nowrap;
     }
 
-    .desktop-nav,
-    .header-whatsapp {
-      display: none;
+    .brand-sub{
+      display:none;
     }
 
-    .hero {
-      position: relative;
-      min-height: 100svh;
-      padding: calc(var(--header-h) + env(safe-area-inset-top) + 34px) 22px 48px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      isolation: isolate;
+    .desktop-nav,.header-cta{display:none}
+
+    .hero{
+      position:relative;
+      min-height:100svh;
+      padding:calc(var(--header) + env(safe-area-inset-top) + 34px) 22px 48px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      isolation:isolate;
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -3;
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-3;
       background:
-        linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.68) 35%, rgba(0,0,0,0.86) 100%),
-        var(--logo-src) center / cover no-repeat;
-      opacity: 0.55;
-      filter: blur(1px) brightness(0.68) contrast(1.18);
-      transform: scale(1.08);
+        linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.66) 42%,rgba(0,0,0,.9)),
+        var(--hero-img) center/cover no-repeat;
+      opacity:.78;
+      filter:brightness(.78) contrast(1.16) saturate(1.04);
+      transform:scale(1.04);
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:-2;
       background:
-        radial-gradient(circle at 75% 24%, rgba(255, 220, 145, 0.14), transparent 260px),
-        linear-gradient(90deg, rgba(0,0,0,0.86), rgba(0,0,0,0.45), rgba(0,0,0,0.84));
+        radial-gradient(circle at 76% 20%,rgba(255,220,145,.18),transparent 280px),
+        linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.42),rgba(0,0,0,.82));
     }
 
-    .hero-content {
-      width: 100%;
-      max-width: 760px;
+    .hero-box{
+      width:100%;
+      max-width:800px;
+      position:relative;
+      z-index:2;
     }
 
-    .kicker {
-      margin: 0 0 14px;
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+    .kicker{
+      margin:0 0 14px;
+      color:var(--gold2);
+      font-size:12px;
+      font-weight:950;
+      letter-spacing:.18em;
+      text-transform:uppercase;
     }
 
-    .hero h1 {
-      margin: 0 0 22px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(44px, 13.5vw, 78px);
-      line-height: 0.92;
-      letter-spacing: -0.055em;
-      text-wrap: balance;
-      text-shadow: 0 12px 40px rgba(0,0,0,0.9);
+    h1,h2,h3,p{margin-top:0}
+
+    .hero h1{
+      margin:0 0 22px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(45px,13.4vw,80px);
+      line-height:.91;
+      letter-spacing:-.058em;
+      text-shadow:0 14px 44px rgba(0,0,0,.94);
+      text-wrap:balance;
     }
 
-    .hero-lead {
-      margin: 0 0 22px;
-      font-size: clamp(23px, 6.5vw, 34px);
-      line-height: 1.12;
-      font-weight: 950;
-      letter-spacing: -0.04em;
-      text-shadow: 0 10px 34px rgba(0,0,0,0.88);
+    .hero-lead{
+      margin:0 0 20px;
+      font-size:clamp(24px,6.6vw,36px);
+      line-height:1.1;
+      font-weight:950;
+      letter-spacing:-.04em;
+      text-shadow:0 12px 34px rgba(0,0,0,.9);
     }
 
-    .hero-text {
-      margin: 0;
-      color: var(--muted);
-      font-size: clamp(17px, 4.8vw, 23px);
-      line-height: 1.42;
-      font-weight: 720;
-      text-shadow: 0 10px 34px rgba(0,0,0,0.88);
+    .hero-text{
+      margin:0;
+      color:var(--muted);
+      font-size:clamp(17px,4.7vw,23px);
+      line-height:1.42;
+      font-weight:720;
+      text-shadow:0 10px 34px rgba(0,0,0,.9);
     }
 
-    .mobile-note {
-      margin-top: 22px;
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(0, 0, 0, 0.38);
-      color: rgba(255, 243, 223, 0.82);
-      font-size: 15px;
-      line-height: 1.45;
-      font-weight: 650;
+    .proof-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:22px;
     }
 
-    .desktop-actions { display: none; }
-
-    .section {
-      padding: 52px 22px;
-      border-top: 1px solid rgba(255, 220, 145, 0.16);
-      background: rgba(0, 0, 0, 0.18);
+    .proof-row span{
+      padding:9px 11px;
+      border-radius:999px;
+      border:1px solid rgba(255,220,145,.28);
+      background:rgba(0,0,0,.44);
+      color:rgba(255,243,223,.9);
+      font-size:13px;
+      font-weight:850;
     }
 
-    .section h2 {
-      margin: 0 0 16px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 9vw, 54px);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
+    .desktop-actions{display:none}
+
+    .section{
+      padding:54px 22px;
+      border-top:1px solid rgba(255,220,145,.16);
+      background:rgba(0,0,0,.18);
     }
 
-    .section p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.55;
-      font-weight: 620;
+    .section h2{
+      margin:0 0 16px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(33px,9.2vw,56px);
+      line-height:.98;
+      letter-spacing:-.046em;
+      text-wrap:balance;
     }
 
-    .cards,
-    .gallery-placeholders {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
+    .section p{
+      margin:0;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.55;
+      font-weight:650;
     }
 
-    .card {
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: linear-gradient(145deg, rgba(255, 220, 145, 0.08), rgba(255,255,255,0.025));
-      box-shadow: 0 14px 40px rgba(0,0,0,0.24);
+    .cards,.visual-grid{
+      display:grid;
+      gap:14px;
+      margin-top:24px;
     }
 
-    .card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--gold-light);
-      font-size: 16px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 22px;
-      line-height: 1.12;
-    }
-
-    .card p {
-      font-size: 16px;
-      line-height: 1.48;
-    }
-
-    .photo-slot {
-      min-height: 154px;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255, 220, 145, 0.13), rgba(0,0,0,0.22));
-      display: flex;
-      align-items: flex-end;
-      padding: 16px;
-    }
-
-    .photo-slot span {
-      display: inline-flex;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.58);
-      border: 1px solid rgba(255, 220, 145, 0.22);
-      color: var(--cream);
-      font-weight: 850;
-      font-size: 14px;
-    }
-
-    .contact-box {
-      margin-top: 24px;
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: 26px;
+    .card{
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:24px;
       background:
-        radial-gradient(circle at 80% 10%, rgba(255, 220, 145, 0.16), transparent 220px),
-        rgba(255,255,255,0.035);
+        radial-gradient(circle at 85% 0%,rgba(255,220,145,.13),transparent 190px),
+        linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+      box-shadow:0 16px 45px rgba(0,0,0,.28);
     }
 
-    .contact-box p + p { margin-top: 10px; }
-
-    .mobile-sticky-cta {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 70;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      padding: 12px 18px calc(12px + env(safe-area-inset-bottom));
-      background: linear-gradient(to top, rgba(0,0,0,0.98), rgba(0,0,0,0.78), rgba(0,0,0,0.18));
-      border-top: 1px solid rgba(255, 220, 145, 0.20);
+    .card strong{
+      display:block;
+      color:var(--gold2);
+      margin-bottom:8px;
+      letter-spacing:.1em;
+      font-size:14px;
+      text-transform:uppercase;
     }
 
-    .mobile-sticky-cta a {
-      min-height: 62px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: clamp(22px, 6vw, 26px);
-      font-weight: 950;
-      letter-spacing: -0.02em;
-      box-shadow: 0 18px 44px rgba(0,0,0,0.36);
+    .card h3{
+      margin:0 0 8px;
+      font-size:22px;
+      line-height:1.12;
     }
 
-    .call-btn {
-      color: #fff6e6;
-      background: rgba(0, 0, 0, 0.58);
-      border: 1px solid rgba(255, 220, 145, 0.34);
+    .card p{
+      font-size:16px;
+      line-height:1.48;
     }
 
-    .whatsapp-btn {
-      color: #070604;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      border: 1px solid rgba(255, 231, 160, 0.72);
+    .visual{
+      position:relative;
+      min-height:188px;
+      border:1px solid var(--line);
+      border-radius:26px;
+      overflow:hidden;
+      display:flex;
+      align-items:flex-end;
+      padding:16px;
+      background:
+        radial-gradient(circle at 70% 20%,rgba(255,220,145,.18),transparent 220px),
+        linear-gradient(145deg,rgba(255,220,145,.09),rgba(0,0,0,.22));
     }
 
-    footer {
-      padding: 34px 22px calc(40px + var(--bottom-h));
-      color: var(--muted-2);
-      border-top: 1px solid rgba(255, 220, 145, 0.16);
-      font-size: 14px;
-      line-height: 1.5;
+    .visual::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.78)),
+        var(--slot-img, none) center/cover no-repeat;
+      opacity:var(--slot-opacity,.95);
     }
 
-    footer strong {
-      display: block;
-      color: var(--cream);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+    .visual span{
+      position:relative;
+      z-index:2;
+      display:inline-flex;
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid rgba(255,220,145,.26);
+      background:rgba(0,0,0,.62);
+      font-weight:900;
+      font-size:14px;
     }
 
-    @media (min-width: 820px) {
-      :root { --header-h: 86px; }
+    .quote{
+      margin-top:24px;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:
+        radial-gradient(circle at 75% 18%,rgba(255,220,145,.15),transparent 240px),
+        rgba(255,255,255,.035);
+    }
 
-      body { padding-bottom: 0; }
+    .quote p{
+      color:var(--cream);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(25px,7vw,42px);
+      line-height:1.08;
+      letter-spacing:-.045em;
+    }
 
-      .site-header {
-        padding-left: clamp(32px, 5vw, 72px);
-        padding-right: clamp(32px, 5vw, 72px);
+    .contact-box{
+      margin-top:24px;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:
+        radial-gradient(circle at 80% 0%,rgba(255,220,145,.16),transparent 230px),
+        rgba(255,255,255,.035);
+    }
+
+    .contact-box p + p{margin-top:10px}
+
+    .mobile-sticky-cta{
+      position:fixed;
+      left:0;right:0;bottom:0;
+      z-index:100;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      padding:12px 18px calc(12px + env(safe-area-inset-bottom));
+      background:linear-gradient(to top,rgba(0,0,0,.98),rgba(0,0,0,.80),rgba(0,0,0,.18));
+      border-top:1px solid rgba(255,220,145,.2);
+    }
+
+    .mobile-sticky-cta a{
+      min-height:62px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:clamp(22px,6vw,26px);
+      font-weight:950;
+      box-shadow:0 18px 46px rgba(0,0,0,.38);
+    }
+
+    .call-btn{
+      color:#fff6e6;
+      background:rgba(0,0,0,.58);
+      border:1px solid rgba(255,220,145,.34);
+    }
+
+    .whatsapp-btn{
+      color:#070604;
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      border:1px solid rgba(255,231,160,.72);
+    }
+
+    footer{
+      padding:34px 22px calc(42px + var(--bottom));
+      color:var(--soft);
+      border-top:1px solid rgba(255,220,145,.16);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    footer strong{
+      display:block;
+      color:var(--cream);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:22px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    @media (min-width:820px){
+      :root{--header:86px}
+      body{padding-bottom:0}
+
+      .site-header{
+        padding-left:clamp(32px,5vw,72px);
+        padding-right:clamp(32px,5vw,72px);
       }
 
-      .brand img {
-        width: 60px;
-        height: 60px;
+      .brand-logo{width:60px;height:60px}
+      .brand-sub{
+        display:block;
+        color:var(--soft);
+        font-size:12px;
+        letter-spacing:.08em;
+        margin-top:4px;
+        text-transform:uppercase;
       }
 
-      .desktop-nav {
-        display: flex;
-        gap: 24px;
-        color: var(--muted);
-        font-weight: 750;
+      .desktop-nav{
+        display:flex;
+        gap:24px;
+        color:var(--muted);
+        font-weight:760;
       }
 
-      .desktop-nav a:hover { color: var(--gold-light); }
+      .desktop-nav a:hover{color:var(--gold2)}
 
-      .header-whatsapp {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 0 24px;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--gold-light), var(--gold));
-        color: #080604;
-        font-weight: 950;
+      .header-cta{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-height:48px;
+        padding:0 24px;
+        border-radius:999px;
+        background:linear-gradient(135deg,var(--gold2),var(--gold));
+        color:#080604;
+        font-weight:950;
       }
 
-      .hero {
-        padding: calc(var(--header-h) + env(safe-area-inset-top) + 58px) clamp(32px, 5vw, 72px) 70px;
-        min-height: 100vh;
+      .hero{
+        padding:calc(var(--header) + env(safe-area-inset-top) + 58px) clamp(32px,5vw,72px) 76px;
+        min-height:100vh;
       }
 
-      .hero-content { max-width: 980px; }
+      .hero-box{max-width:1040px}
+      .hero h1{font-size:clamp(78px,8vw,128px);max-width:980px}
+      .hero-lead{font-size:clamp(30px,3vw,48px);max-width:880px}
+      .hero-text{font-size:clamp(19px,1.6vw,25px);max-width:850px}
 
-      .hero h1 {
-        font-size: clamp(76px, 8vw, 126px);
-        max-width: 980px;
+      .desktop-actions{
+        display:flex;
+        gap:14px;
+        margin-top:30px;
+        flex-wrap:wrap;
       }
 
-      .hero-lead {
-        font-size: clamp(30px, 3vw, 48px);
-        max-width: 880px;
+      .desktop-actions a{
+        min-height:56px;
+        padding:0 28px;
+        border-radius:999px;
+        font-weight:950;
       }
 
-      .hero-text {
-        font-size: clamp(19px, 1.6vw, 25px);
-        max-width: 850px;
+      .desktop-actions .gold{
+        color:#070604;
+        background:linear-gradient(135deg,var(--gold2),var(--gold));
       }
 
-      .desktop-actions {
-        display: flex;
-        gap: 14px;
-        margin-top: 30px;
-        flex-wrap: wrap;
+      .desktop-actions .dark{
+        color:var(--cream);
+        border:1px solid var(--line);
+        background:rgba(0,0,0,.42);
       }
 
-      .desktop-actions a {
-        min-height: 56px;
-        padding: 0 28px;
-        border-radius: 999px;
-        font-weight: 950;
-      }
-
-      .desktop-actions .gold {
-        color: #070604;
-        background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      }
-
-      .desktop-actions .dark {
-        color: var(--cream);
-        border: 1px solid var(--line);
-        background: rgba(0,0,0,0.42);
-      }
-
-      .mobile-sticky-cta,
-      .mobile-note {
-        display: none;
-      }
-
-      .section {
-        padding: 82px clamp(32px, 5vw, 72px);
-      }
-
-      .section p {
-        font-size: 20px;
-        max-width: 920px;
-      }
-
-      .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .gallery-placeholders { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .photo-slot { min-height: 230px; }
-
-      footer { padding: 40px clamp(32px, 5vw, 72px); }
+      .mobile-sticky-cta{display:none}
+      .section{padding:84px clamp(32px,5vw,72px)}
+      .section p{font-size:20px;max-width:940px}
+      .cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .visual-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .visual{min-height:250px}
+      footer{padding:42px clamp(32px,5vw,72px)}
     }
   </style>
 </head>
@@ -443,46 +453,54 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#accueil" aria-label="Accueil BIDA Prestige">
-      <img src="assets/logo-bida-prestige.jpg" alt="Logo BIDA Prestige">
-      <span class="brand-name">BIDA Prestige</span>
+      <img id="brandLogo" class="brand-logo" alt="Logo BIDA Prestige">
+      <span>
+        <span class="brand-title">BIDA Prestige</span>
+        <span class="brand-sub">Mercedes • Mariage • Chauffeur</span>
+      </span>
     </a>
 
     <nav class="desktop-nav" aria-label="Navigation">
       <a href="#services">Services</a>
-      <a href="#ambiance">Mariage chaoui</a>
+      <a href="#ambiance">Ambiance</a>
       <a href="#photos">Photos</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="header-whatsapp" href="https://wa.me/213770742975?text=Salam%2C%20je%20veux%20un%20devis%20BIDA%20Prestige%20pour%20un%20mariage." target="_blank" rel="noopener">WhatsApp</a>
+    <a class="header-cta" href="https://wa.me/213770742975?text=Salam%2C%20je%20veux%20un%20devis%20BIDA%20Prestige%20pour%20un%20mariage." target="_blank" rel="noopener">WhatsApp</a>
   </header>
 
   <main id="accueil">
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-box">
         <p class="kicker">Mercedes mariage avec chauffeur à Khenchela</p>
         <h1>Une arrivée qui marque le mariage.</h1>
         <p class="hero-lead">Mercedes décorée, chauffeur sérieux, cortège propre et ambiance chaouie.</p>
-        <p class="hero-text">BIDA Prestige accompagne les mariages, fiançailles et événements à Khenchela avec une présence élégante, locale et fiable.</p>
+        <p class="hero-text">BIDA Prestige accompagne les mariages, fiançailles et événements avec une présence élégante, locale et fiable.</p>
+
+        <div class="proof-row" aria-label="Points forts">
+          <span>Mercedes propre</span>
+          <span>Chauffeur</span>
+          <span>Cortège</span>
+          <span>Sur devis</span>
+        </div>
 
         <div class="desktop-actions">
           <a class="gold" href="https://wa.me/213770742975?text=Salam%2C%20je%20veux%20un%20devis%20BIDA%20Prestige.%0ADate%20:%0AVille%20:%0AD%C3%A9part%20:%0AArriv%C3%A9e%20:%0AChauffeur%20:%0AD%C3%A9coration%20:" target="_blank" rel="noopener">Demander sur WhatsApp</a>
           <a class="dark" href="tel:+213770742975">Appeler 0770 74 29 75</a>
         </div>
-
-        <p class="mobile-note">Prestation sur devis selon la date, la distance, le véhicule disponible, la décoration et l’organisation du cortège.</p>
       </div>
     </section>
 
     <section class="section" id="services">
       <p class="kicker">Services</p>
       <h2>Pas juste une voiture. Une arrivée maîtrisée.</h2>
-      <p>Le but est simple : une Mercedes propre, une arrivée élégante, un chauffeur sérieux et un accompagnement adapté au rythme du mariage algérien.</p>
+      <p>Le service doit rassurer la famille : une voiture propre, une conduite sérieuse, une arrivée coordonnée et un style adapté au mariage algérien.</p>
 
       <div class="cards">
         <article class="card"><strong>01</strong><h3>Mercedes mariage</h3><p>Voiture propre, présentée avec soin, adaptée aux photos et à l’arrivée des mariés.</p></article>
-        <article class="card"><strong>02</strong><h3>Chauffeur</h3><p>Conduite calme, ponctualité et respect de la famille pendant la prestation.</p></article>
-        <article class="card"><strong>03</strong><h3>Cortège</h3><p>Accompagnement possible pour organiser une arrivée propre et coordonnée.</p></article>
+        <article class="card"><strong>02</strong><h3>Chauffeur sérieux</h3><p>Conduite calme, ponctualité et respect de la famille pendant la prestation.</p></article>
+        <article class="card"><strong>03</strong><h3>Cortège propre</h3><p>Accompagnement possible pour organiser une arrivée coordonnée et élégante.</p></article>
         <article class="card"><strong>04</strong><h3>Événements</h3><p>Mariages, fiançailles, sorties spéciales et événements familiaux sur devis.</p></article>
       </div>
     </section>
@@ -490,21 +508,25 @@
     <section class="section" id="ambiance">
       <p class="kicker">Khenchela • Esprit local</p>
       <h2>Mariage algérien, énergie chaouie, touche Mercedes.</h2>
-      <p>À Khenchela, l’arrivée compte. La famille, le cortège, la musique, l’ambiance, parfois les chevaux et le baroud traditionnel font partie de la force du mariage. BIDA Prestige ajoute à cette énergie une voiture propre, élégante et conduite sérieusement.</p>
+      <p>À Khenchela, l’arrivée compte : la famille, le cortège, la musique, l’ambiance, parfois les chevaux et le baroud traditionnel. BIDA Prestige ajoute à cette énergie une Mercedes propre, élégante et conduite sérieusement.</p>
+
+      <div class="quote">
+        <p>Votre arrivée mérite une belle voiture, un chauffeur sérieux et un cortège propre.</p>
+      </div>
     </section>
 
     <section class="section" id="photos">
-      <p class="kicker">Photos à intégrer</p>
-      <h2>Les images réelles feront la différence.</h2>
-      <p>Pour que le site soit vraiment crédible, il faudra remplacer ces emplacements par vos vraies photos : voiture décorée, chauffeur, cortège, arrivée et détails mariage.</p>
+      <p class="kicker">Visuels</p>
+      <h2>Les photos doivent vendre l’arrivée, pas seulement la voiture.</h2>
+      <p>Le site cherche automatiquement les images déjà présentes dans tes fichiers. Rien n’est renommé ici.</p>
 
-      <div class="gallery-placeholders">
-        <div class="photo-slot"><span>Mercedes décorée</span></div>
-        <div class="photo-slot"><span>Arrivée des mariés</span></div>
-        <div class="photo-slot"><span>Cortège</span></div>
-        <div class="photo-slot"><span>Chauffeur</span></div>
-        <div class="photo-slot"><span>Ambiance chaouie</span></div>
-        <div class="photo-slot"><span>Détails mariage</span></div>
+      <div class="visual-grid">
+        <div class="visual" id="slot1"><span>Logo principal</span></div>
+        <div class="visual" id="slot2"><span>Bannière partage</span></div>
+        <div class="visual" id="slot3"><span>Affiche WhatsApp</span></div>
+        <div class="visual" id="slot4"><span>Mercedes décorée</span></div>
+        <div class="visual" id="slot5"><span>Cortège mariage</span></div>
+        <div class="visual" id="slot6"><span>Ambiance chaouie</span></div>
       </div>
     </section>
 
@@ -530,5 +552,72 @@
     <a class="call-btn" href="tel:+213770742975">Appeler</a>
     <a class="whatsapp-btn" href="https://wa.me/213770742975?text=Salam%2C%20je%20veux%20un%20devis%20BIDA%20Prestige.%0ADate%20:%0AVille%20:%0AD%C3%A9part%20:%0AArriv%C3%A9e%20:%0AChauffeur%20:%0AD%C3%A9coration%20:" target="_blank" rel="noopener">WhatsApp</a>
   </div>
+
+  <script>
+    const imageCandidates = [
+      "assets/00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png",
+      "00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png",
+      "assets/01_Logo_Principal_BIDA_Auto_Mariage_Chauffeur.png",
+      "01_Logo_Principal_BIDA_Auto_Mariage_Chauffeur.png",
+      "assets/logo-bida-prestige.jpg",
+      "assets/logo-bida-auto.jpg",
+      "assets/logo-bida-prestige.png",
+      "assets/logo-bida-auto.png",
+      "assets/logo.jpg",
+      "assets/logo.png",
+      "logo-bida-prestige.jpg",
+      "logo-bida-auto.jpg",
+      "logo.jpg",
+      "logo.png"
+    ];
+
+    const heroCandidates = [
+      "assets/04_Banniere_Promo_BIDA_Auto.png",
+      "04_Banniere_Promo_BIDA_Auto.png",
+      "assets/publicité_de_luxe_pour_voiture.png",
+      "publicité_de_luxe_pour_voiture.png",
+      "assets/05_Affiche_Verticale_WhatsApp_BIDA_Auto.png",
+      "05_Affiche_Verticale_WhatsApp_BIDA_Auto.png",
+      ...imageCandidates
+    ];
+
+    const slotCandidates = [
+      ["assets/00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png","00_PRINCIPAL_SI_JOINT_BIDA_Prestige_Algerie.png",...imageCandidates],
+      ["assets/04_Banniere_Promo_BIDA_Auto.png","04_Banniere_Promo_BIDA_Auto.png","assets/publicité_de_luxe_pour_voiture.png","publicité_de_luxe_pour_voiture.png"],
+      ["assets/05_Affiche_Verticale_WhatsApp_BIDA_Auto.png","05_Affiche_Verticale_WhatsApp_BIDA_Auto.png"],
+      ["assets/02_Logo_Horizontal_BIDA_Auto.png","02_Logo_Horizontal_BIDA_Auto.png",...heroCandidates],
+      ["assets/01_Logo_Principal_BIDA_Auto_Mariage_Chauffeur.png","01_Logo_Principal_BIDA_Auto_Mariage_Chauffeur.png",...heroCandidates],
+      ["assets/03_Monogramme_B_BIDA_Auto.png","03_Monogramme_B_BIDA_Auto.png",...heroCandidates]
+    ];
+
+    function firstExisting(list, callback){
+      let index = 0;
+      function test(){
+        if(index >= list.length) return callback(null);
+        const src = list[index++];
+        const img = new Image();
+        img.onload = () => callback(src);
+        img.onerror = test;
+        img.src = src + "?v=" + Date.now();
+      }
+      test();
+    }
+
+    firstExisting(imageCandidates, (src) => {
+      if(src) document.getElementById("brandLogo").src = src;
+    });
+
+    firstExisting(heroCandidates, (src) => {
+      if(src) document.documentElement.style.setProperty("--hero-img", `url("${src}")`);
+    });
+
+    slotCandidates.forEach((list, i) => {
+      firstExisting(list, (src) => {
+        if(!src) return;
+        const el = document.getElementById("slot" + (i + 1));
+        if(el) el.style.setProperty("--slot-img", `url("${src}")`);
+      });
+    });
+  </script>
 </body>
 </html>
